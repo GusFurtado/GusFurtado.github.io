@@ -77,7 +77,7 @@ cv:
           - "Advisor: Dr. Evandro Bittencourt"
           - "Final Project: Economic Feasibility Analysis for Acquiring Monitoring Software for Productive Maintenance Activities of Aluminum Injection Molding Machines"
     Projects:
-      - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab.html)"
+      - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab/index.html)"
         summary: Open-source Python package, with over 190,000 downloads, that simplifies access to Brazilian government open data and APIs, such as IBGE and IPEA.
     Awards:
       - SIMEP 2017 Award for Best Operations Research Paper

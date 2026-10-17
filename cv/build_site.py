@@ -16,7 +16,7 @@ INDEX_FILE = ROOT / "index.html"
 
 START = "<!-- cv:start -->"
 END = "<!-- cv:end -->"
-INDENT = "\t" * 5
+INDENT = "\t" * 3
 
 EXPERIENCE_SECTION = "Experiência Profissional"
 EDUCATION_SECTION = "Formação Acadêmica"
@@ -31,25 +31,19 @@ def period(entry):
 
 def heading(title):
     return (
-        f'{INDENT}<li class="timeline-heading text-center animate-box">\n'
-        f"{INDENT}\t<div><h3>{escape(title)}</h3></div>\n"
-        f"{INDENT}</li>\n"
+        f'{INDENT}<li class="timeline-section animate-box"><h3>{escape(title)}</h3></li>\n'
     )
 
 
 def item(index, icon, title, subtitle, text):
-    side = "timeline-unverted" if index % 2 == 0 else "timeline-inverted"
+    side = "left" if index % 2 == 0 else "right"
     return (
-        f'{INDENT}<li class="animate-box {side}">\n'
-        f'{INDENT}\t<div class="timeline-badge"><i class="{icon}"></i></div>\n'
+        f'{INDENT}<li class="timeline-item {side} animate-box">\n'
+        f'{INDENT}\t<span class="timeline-badge"><svg class="icon"><use href="#{icon}"/></svg></span>\n'
         f'{INDENT}\t<div class="timeline-panel">\n'
-        f'{INDENT}\t\t<div class="timeline-heading">\n'
-        f'{INDENT}\t\t\t<h3 class="timeline-title">{escape(title)}</h3>\n'
-        f'{INDENT}\t\t\t<span class="company">{escape(subtitle)}</span>\n'
-        f"{INDENT}\t\t</div>\n"
-        f'{INDENT}\t\t<div class="timeline-body">\n'
-        f"{INDENT}\t\t\t<p>{escape(text)}</p>\n"
-        f"{INDENT}\t\t</div>\n"
+        f"{INDENT}\t\t<h3>{escape(title)}</h3>\n"
+        f'{INDENT}\t\t<span class="company">{escape(subtitle)}</span>\n'
+        f"{INDENT}\t\t<p>{escape(text)}</p>\n"
         f"{INDENT}\t</div>\n"
         f"{INDENT}</li>\n"
     )
@@ -61,16 +55,16 @@ def build(cv):
     for i, job in enumerate(sections[EXPERIENCE_SECTION]):
         html += item(
             i,
-            "icon-suitcase",
+            "i-briefcase",
             job["position"],
             f"{job['company']} - {period(job)}",
             job["site"],
         )
-    html += f"\n{INDENT}<br>\n" + heading(EDUCATION_SECTION)
+    html += heading(EDUCATION_SECTION)
     for i, course in enumerate(sections[EDUCATION_SECTION]):
         html += item(
             i + 1,
-            "icon-graduation-cap",
+            "i-graduation",
             f"{course['degree']} em {course['area']}",
             f"{course['institution']} - {period(course)}",
             course["site"],

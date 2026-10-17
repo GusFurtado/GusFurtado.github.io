@@ -84,7 +84,7 @@ cv:
           - "Orientador: Dr. Evandro Bittencourt"
           - "TCC: Análise de Viabilidade Econômica da Aquisição de um Software de Monitoramento das Atividades de Manutenção Produtiva de Injetoras de Alumínio"
     Projetos:
-      - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab.html)"
+      - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab/index.html)"
         summary: Pacote open-source para Python, com mais de 190 mil downloads, que facilita o acesso a dados abertos e APIs do governo brasileiro, como IBGE e IPEA.
     Reconhecimentos:
       - Prêmio SIMEP 2017 de Melhor Artigo de Pesquisa Operacional
