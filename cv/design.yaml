@@ -1,5 +1,9 @@
 design:
   theme: classic
+  page:
+    size: a4
+    top_margin: 0.5in
+    bottom_margin: 0.5in
   templates:
     education_entry:
       main_column: "**INSTITUTION**, DEGREE_WITH_AREA\nSUMMARY\nHIGHLIGHTS"

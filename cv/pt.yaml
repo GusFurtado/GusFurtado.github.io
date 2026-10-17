@@ -82,7 +82,7 @@ cv:
         site: Viabilidade econômica em manutenção produtiva.
         highlights:
           - "Orientador: Dr. Evandro Bittencourt"
-          - "Trabalho de Conclusão de Curso: Análise de Viabilidade Econômica da Aquisição de um Software de Monitoramento das Atividades de Manutenção Produtiva de Injetoras de Alumínio"
+          - "TCC: Análise de Viabilidade Econômica da Aquisição de um Software de Monitoramento das Atividades de Manutenção Produtiva de Injetoras de Alumínio"
     Projetos:
       - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab.html)"
         summary: Pacote open-source para Python, com mais de 190 mil downloads, que facilita o acesso a dados abertos e APIs do governo brasileiro, como IBGE e IPEA.
@@ -100,6 +100,43 @@ cv:
         details: Scikit-learn, TensorFlow, XGBoost, statsmodels, MLOps, IA Generativa, LLMs
       - label: Web apps e dashboards
         details: Flask, FastAPI, Plotly
+    Publicações:
+      - title: "Análise Baseada em Simulação de Sistemas de Produção Compartilhada"
+        authors:
+          - "**Gustavo Furtado da Silva**"
+          - Nelson Casarotto Filho
+          - Enzo Morosini Frazzon
+        journal: "Gestão & Produção, 27(1)"
+        date: 2020-03
+        doi: 10.1590/0104-530X3718-20
+      - title: "Métodos de Simulação-Otimização Aplicados a Internalização de Processos Produtivos"
+        authors:
+          - "**Gustavo Furtado da Silva**"
+          - Nelson Casarotto Filho
+        journal: "V Simpósio de Engenharia de Produção (SIMEP)"
+        date: 2017-05
+      - title: "Análise Baseada em Simulação de Sistemas “One Product Integrated Manufacturing”"
+        authors:
+          - "**Gustavo Furtado da Silva**"
+          - Enzo Morosini Frazzon
+          - Nelson Casarotto Filho
+        journal: "IX Simposio Internacional de Ingeniería Industrial"
+        date: 2016-10
+      - title: "Proposta de Método de Otimização-Simulação para Apoiar a Tomada de Decisão em Internalização de Processos Produtivos"
+        authors:
+          - "**Gustavo Furtado da Silva**"
+          - Enzo Morosini Frazzon
+          - Nelson Casarotto Filho
+        journal: "Exacta, 13(3)"
+        date: 2015-10
+        doi: 10.5585/ExactaEP.v13n3.5967
+      - title: "Análise de Viabilidade Financeira para a Aquisição de um Software de Monitoramento das Atividades de Manutenção Produtiva de Injetoras de Alumínio"
+        authors:
+          - "**Gustavo Furtado da Silva**"
+          - Evandro Bittencourt
+          - Valdésio Benevenutti
+        journal: "III Simpósio de Engenharia de Produção (SIMEP)"
+        date: 2015-05
 locale:
   language: portuguese
 settings:
