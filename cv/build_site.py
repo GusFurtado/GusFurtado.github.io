@@ -1,7 +1,8 @@
-"""Gera a timeline da seção "Meu currículo" do index.html a partir de cv/pt.yaml.
+"""Gera partes do index.html a partir de cv/pt.yaml.
 
-Substitui apenas o trecho entre os marcadores <!-- cv:start --> e <!-- cv:end -->.
-Cada entrada usa o campo `site` (uma frase curta), que o RenderCV ignora no PDF.
+- Entre <!-- about:start --> e <!-- about:end -->: o resumo, na seção "Sobre mim".
+- Entre <!-- cv:start --> e <!-- cv:end -->: a timeline da seção "Meu currículo".
+  Cada entrada usa o campo `site` (uma frase curta), que o RenderCV ignora no PDF.
 Uso: python cv/build_site.py
 """
 
@@ -14,9 +15,10 @@ ROOT = Path(__file__).resolve().parent.parent
 CV_FILE = ROOT / "cv" / "pt.yaml"
 INDEX_FILE = ROOT / "index.html"
 
-START = "<!-- cv:start -->"
-END = "<!-- cv:end -->"
 INDENT = "\t" * 3
+ABOUT_INDENT = "\t" * 5
+
+SUMMARY_SECTION = "Resumo"
 
 EXPERIENCE_SECTION = "Experiência Profissional"
 EDUCATION_SECTION = "Formação Acadêmica"
@@ -72,12 +74,25 @@ def build(cv):
     return html
 
 
+def build_about(cv):
+    return "".join(
+        f"{ABOUT_INDENT}<p>{escape(text)}</p>\n"
+        for text in cv["cv"]["sections"][SUMMARY_SECTION]
+    )
+
+
+def replace_between(page, name, content, indent):
+    start, end = f"<!-- {name}:start -->", f"<!-- {name}:end -->"
+    before, rest = page.split(start, 1)
+    _, after = rest.split(end, 1)
+    return f"{before}{start}\n{content}{indent}{end}{after}"
+
+
 def main():
     cv = yaml.safe_load(CV_FILE.read_text(encoding="utf-8"))
     page = INDEX_FILE.read_text(encoding="utf-8")
-    before, rest = page.split(START, 1)
-    _, after = rest.split(END, 1)
-    page = f"{before}{START}\n{build(cv)}{INDENT}{END}{after}"
+    page = replace_between(page, "about", build_about(cv), ABOUT_INDENT)
+    page = replace_between(page, "cv", build(cv), INDENT)
     INDEX_FILE.write_text(page, encoding="utf-8")
 
 
