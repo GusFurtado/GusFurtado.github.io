@@ -16,7 +16,7 @@ CV_FILE = ROOT / "cv" / "pt.yaml"
 INDEX_FILE = ROOT / "index.html"
 
 INDENT = "\t" * 3
-ABOUT_INDENT = "\t" * 5
+ABOUT_INDENT = "\t" * 4
 
 SUMMARY_SECTION = "Resumo"
 

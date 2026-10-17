@@ -193,32 +193,8 @@ a {
 /* Sobre mim */
 
 .about {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 30px;
-}
-
-.about h3 {
-	font-size: 30px;
-}
-
-.info {
-	display: grid;
-	grid-template-columns: max-content 1fr;
-	align-content: start;
-	gap: 20px 30px;
-	margin: 0;
-}
-
-.info dt {
-	color: #000;
-	font-weight: bold;
-}
-
-.info dd {
-	margin: 0;
-	overflow-wrap: anywhere;
-	color: rgba(0, 0, 0, 0.5);
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 .social-icons-boxed li {
@@ -390,7 +366,6 @@ a {
 /* Telas menores */
 
 @media (max-width: 991px) {
-	.about,
 	.projects {
 		grid-template-columns: 1fr;
 	}
