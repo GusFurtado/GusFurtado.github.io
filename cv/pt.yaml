@@ -1,0 +1,109 @@
+cv:
+  name: Gustavo Furtado da Silva
+  headline: Cientista de Dados
+  email: gustavofurtado2@gmail.com
+  website: https://www.gustavofurtado.com/
+  social_networks:
+    - network: LinkedIn
+      username: gustavo-furtado
+    - network: GitHub
+      username: GusFurtado
+  sections:
+    Resumo:
+      - Cientista de dados com foco em pipelines de dados de ponta a ponta (ingestão, ETL, qualidade e orquestração) que alimentam modelos de machine learning e análises. Hoje atuo em P&D na Samsung Research Brazil; antes, foram oito anos na Ypê levando pipelines, machine learning e simulação para a manufatura e a área comercial. Mestre em Engenharia de Produção e Pesquisa Operacional pela UFSC. Python, SQL, Spark, Databricks, Airflow e dbt.
+    Experiência Profissional:
+      - company: Samsung Research Brazil
+        position: Especialista de P&D em Ciência de Dados
+        start_date: 2025-02
+        end_date: present
+        location: Campinas
+        site: Pipelines e ciência de dados clínicos para P&D em saúde.
+        highlights:
+          - Engenharia e ciência de dados clínicos para projetos de P&D em saúde, com pipelines de dados (ETL) que preparam e validam dados clínicos para modelos de machine learning.
+          - Integração das pipelines com orquestradores, com foco em qualidade, rastreabilidade e reprodutibilidade dos dados.
+          - Participação nos comitês internos de arquitetura e infraestrutura de dados, contribuindo para padrões e governança de dados.
+      - company: Ypê
+        position: Analista Sr. de Big Data e Ciência de Dados
+        start_date: 2021-06
+        end_date: 2025-01
+        location: Amparo
+        site: Pipelines de dados e machine learning com Spark, Databricks, Airflow e dbt.
+        highlights:
+          - Implementação de pipelines escaláveis com Spark, Databricks, Airflow e dbt, reduzindo o tempo de geração de relatórios de uma semana para poucas horas e possibilitando análises em tempo real.
+          - Desenvolvimento de modelos de machine learning utilizando Scikit-Learn e Tensorflow para otimização de faturamento, segmentação de clientes, classificação de produtos e projeções de indicadores, resultando em decisões comerciais mais rápidas e precisas.
+          - Estruturação de um banco de dados PostgreSQL na nuvem com Azure, centralizando informações estratégicas e garantindo maior acessibilidade e confiabilidade dos dados.
+      - company: Ypê
+        position: Analista de Dados de Manufatura
+        start_date: 2018-10
+        end_date: 2021-06
+        location: Amparo
+        site: Web apps em Flask para dados de produção e logística.
+        highlights:
+          - Desenvolvimento de web apps em Flask com Python e SQL Server para visualização e análise de dados logísticos e de produção, incluindo monitoramento de ciclos e rotas de frota via coordenadas GPS, otimizando tempos e trajetos.
+          - Facilitação da gestão de metas e indicadores, com automação de rotinas e treinamento da equipe em práticas de gestão visual e rotina.
+          - Participação de congressos sobre Indústria 4.0 e trabalho com fornecedores para implementar tecnologias como dashboards inteligentes, utilizando simulações para validação de novos projetos.
+      - company: Ypê
+        position: Analista de Simulação Industrial
+        start_date: 2017-12
+        end_date: 2018-10
+        location: Amparo
+        site: Simulação de fábricas e otimização da produção.
+        highlights:
+          - Criação de modelos de simulação de processos para novas fábricas, linhas de produção e otimização de estoques, proporcionando decisões estratégicas embasadas para expansão da capacidade produtiva.
+          - Desenvolvimento de modelos de programação não-linear para otimização de planos de produção, maximizando o uso de recursos produtivos e reduzindo custos operacionais.
+          - Controle e análise de indicadores industriais para geração de insights estratégicos na alta gestão.
+      - company: Wetzel S/A
+        position: Estagiário de Engenharia de Processos
+        start_date: 2011-03
+        end_date: 2013-03
+        location: Joinville
+        site: Cronoanálise e melhoria de processos.
+        highlights:
+          - Cronoanálise e melhoria de processos de fabricação.
+          - Desenvolvimento de ferramentas para aumento de produtividade.
+          - Análise de viabilidade econômica para novos processos.
+    Formação Acadêmica:
+      - institution: Universidade Federal de Santa Catarina
+        degree: "Mestrado"
+        area: Engenharia de Produção e Pesquisa Operacional
+        start_date: 2015-03
+        end_date: 2017-02
+        location: Florianópolis
+        site: Otimização baseada em simulação.
+        highlights:
+          - "Orientador: Dr. Nelson Casarotto Filho"
+          - "Dissertação: Procedimento para Análise de Sistemas de Produção Compartilhada Utilizando Otimização Baseada em Simulação"
+      - institution: Universidade do Estado de Santa Catarina
+        degree: "Bacharelado"
+        area: Engenharia de Produção e Sistemas
+        start_date: 2009-01
+        end_date: 2013-12
+        location: Joinville
+        site: Viabilidade econômica em manutenção produtiva.
+        highlights:
+          - "Orientador: Dr. Evandro Bittencourt"
+          - "Trabalho de Conclusão de Curso: Análise de Viabilidade Econômica da Aquisição de um Software de Monitoramento das Atividades de Manutenção Produtiva de Injetoras de Alumínio"
+    Projetos:
+      - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab.html)"
+        summary: Pacote open-source para Python, com mais de 190 mil downloads, que facilita o acesso a dados abertos e APIs do governo brasileiro, como IBGE e IPEA.
+    Reconhecimentos:
+      - Prêmio SIMEP 2017 de Melhor Artigo de Pesquisa Operacional
+      - "Inglês Avançado: Certificado TOEFL iBT"
+    Data Stack:
+      - label: Linguagens e bancos de dados
+        details: Python, SQL, PySpark, Pandas, PostgreSQL, SQL Server
+      - label: Engenharia de dados
+        details: Data Pipelines, ETL/ELT, Airflow, dbt, Spark, Databricks, Data Lakehouse, Data Quality, Data Governance
+      - label: Cloud e DevOps
+        details: Azure, Docker, Git, GitHub Actions, CI/CD
+      - label: Machine Learning e IA
+        details: Scikit-learn, TensorFlow, XGBoost, statsmodels, MLOps, IA Generativa, LLMs
+      - label: Web apps e dashboards
+        details: Flask, FastAPI, Plotly
+locale:
+  language: portuguese
+settings:
+  pdf_title: Gustavo Furtado - Cientista de Dados
+  render_command:
+    design: design.yaml
+    pdf_path: ../documents/curriculum/Gustavo Furtado - Cientista de Dados.pdf

@@ -1,0 +1,103 @@
+cv:
+  name: Gustavo Furtado da Silva
+  headline: Data Scientist
+  email: gustavofurtado2@gmail.com
+  website: https://www.gustavofurtado.com/
+  social_networks:
+    - network: LinkedIn
+      username: gustavo-furtado
+    - network: GitHub
+      username: GusFurtado
+  sections:
+    Summary:
+      - Data scientist focused on end-to-end data pipelines (ingestion, ETL, data quality and orchestration) that feed machine learning models and analytics. Currently in R&D at Samsung Research Brazil; previously spent eight years at Ypê bringing pipelines, machine learning and simulation to manufacturing and sales. M.Sc. in Production Engineering and Operations Research from the Federal University of Santa Catarina. Python, SQL, Spark, Databricks, Airflow and dbt.
+    Professional Experience:
+      - company: Samsung Research Brazil
+        position: Data Science R&D Specialist
+        start_date: 2025-02
+        end_date: present
+        location: Campinas
+        highlights:
+          - Clinical data engineering and data science for healthcare R&D projects, building data pipelines (ETL) that prepare and validate clinical data for machine learning models.
+          - Integrated pipelines with workflow orchestrators, focusing on data quality, lineage and reproducibility.
+          - Member of internal data architecture and infrastructure committees, contributing to data standards and data governance.
+      - company: Ypê
+        position: Senior Big Data and Data Science Analyst
+        start_date: 2021-06
+        end_date: 2025-01
+        location: Amparo
+        highlights:
+          - Implemented scalable pipelines with Spark, Databricks, Airflow and dbt, reducing report generation time from one week to just a few hours and enabling real-time analytics.
+          - Developed machine learning models using Scikit-Learn and TensorFlow for revenue optimization, customer segmentation, product classification, and indicator forecasting, enabling faster and more accurate business decisions.
+          - Designed and managed a PostgreSQL database on Azure Cloud, centralizing strategic information and ensuring improved data accessibility and reliability.
+      - company: Ypê
+        position: Manufacturing Data Analyst
+        start_date: 2018-10
+        end_date: 2021-06
+        location: Amparo
+        highlights:
+          - Developed web apps in Flask with Python and SQL Server for logistics and production data visualization and analysis, including monitoring fleet cycles and routes via GPS coordinates, optimizing times and routes.
+          - Supported goal management and KPIs by automating routines and training the team in visual management and daily practices.
+          - Participated in Industry 4.0 conferences and worked with suppliers to implement technologies such as intelligent dashboards, using simulations to validate new projects.
+      - company: Ypê
+        position: Industrial Simulation Analyst
+        start_date: 2017-12
+        end_date: 2018-10
+        location: Amparo
+        highlights:
+          - Created process simulation models for new factories, production lines, and inventory optimization, providing data-driven insights for strategic capacity expansion decisions.
+          - Developed nonlinear programming models for optimizing production plans, maximizing resource usage, and reducing operational costs.
+          - Managed and analyzed industrial KPIs to generate strategic insights for senior management.
+      - company: Wetzel S/A
+        position: Process Engineering Intern
+        start_date: 2011-03
+        end_date: 2013-03
+        location: Joinville
+        highlights:
+          - Conducted time studies and improved manufacturing processes.
+          - Developed tools to increase productivity.
+          - Conducted economic feasibility analyses for new processes.
+    Education:
+      - institution: Federal University of Santa Catarina
+        degree: "Master's"
+        area: Production Engineering and Operations Research
+        start_date: 2015-03
+        end_date: 2017-02
+        location: Florianópolis
+        highlights:
+          - "Advisor: Dr. Nelson Casarotto Filho"
+          - "Thesis: Procedure for Analyzing Shared Production Systems Using Simulation-Based Optimization"
+      - institution: State University of Santa Catarina
+        degree: "Bachelor's"
+        area: Production Engineering and Systems
+        start_date: 2009-01
+        end_date: 2013-12
+        location: Joinville
+        highlights:
+          - "Advisor: Dr. Evandro Bittencourt"
+          - "Final Project: Economic Feasibility Analysis for Acquiring Monitoring Software for Productive Maintenance Activities of Aluminum Injection Molding Machines"
+    Projects:
+      - name: "[Dados Abertos Brasil](https://www.gustavofurtado.com/dab.html)"
+        summary: Open-source Python package, with over 190,000 downloads, that simplifies access to Brazilian government open data and APIs, such as IBGE and IPEA.
+    Awards:
+      - SIMEP 2017 Award for Best Operations Research Paper
+      - "Advanced English: TOEFL iBT Certified"
+    Data Stack:
+      - label: Languages and Databases
+        details: Python, SQL, PySpark, Pandas, PostgreSQL, SQL Server
+      - label: Data Engineering
+        details: Data Pipelines, ETL/ELT, Airflow, dbt, Spark, Databricks, Data Lakehouse, Data Quality, Data Governance
+      - label: Cloud and DevOps
+        details: Azure, Docker, Git, GitHub Actions, CI/CD
+      - label: Machine Learning and AI
+        details: Scikit-learn, TensorFlow, XGBoost, statsmodels, MLOps, Generative AI, LLMs
+      - label: Web Apps and Dashboards
+        details: Flask, FastAPI, Plotly
+locale:
+  language: english
+  month_abbreviations: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+settings:
+  pdf_title: Gustavo Furtado - Data Scientist
+  render_command:
+    design: design.yaml
+    pdf_path: ../documents/curriculum/Gustavo Furtado - Data Scientist.pdf

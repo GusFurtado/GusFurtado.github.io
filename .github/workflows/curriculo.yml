@@ -1,0 +1,46 @@
+# Gera os currículos a partir de cv/pt.yaml e cv/en.yaml:
+# - PDFs em documents/curriculum/ (RenderCV)
+# - seção "Meu currículo" do index.html (cv/build_site.py)
+# e faz commit do resultado na própria branch.
+
+name: Currículo
+
+on:
+  push:
+    branches: [master]
+    paths: ["cv/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install "rendercv[full]==2.8" pyyaml
+
+      - name: Gerar PDFs
+        working-directory: cv
+        run: |
+          rendercv render pt.yaml -nomd -nohtml -nopng
+          rendercv render en.yaml -nomd -nohtml -nopng
+
+      - name: Gerar seção do site
+        run: python cv/build_site.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add documents/curriculum index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Gerar currículos a partir de cv/"
+          git push

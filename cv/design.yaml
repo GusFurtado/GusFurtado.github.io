@@ -1,0 +1,6 @@
+design:
+  theme: classic
+  templates:
+    education_entry:
+      main_column: "**INSTITUTION**, DEGREE_WITH_AREA\nSUMMARY\nHIGHLIGHTS"
+      degree_column: null
