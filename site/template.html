@@ -101,6 +101,19 @@
 		</div>
 	</section>
 
+	<section id="{{ t.projects_id }}" class="section section-orange">
+		<div class="container">
+			<h2 class="section-title animate-box">{{ t.projects_title }}</h2>
+			<div class="projects">
+{%- for project in projects %}
+				<a class="project project--{{ project.id }} animate-box" href="{{ project.url if project.url.startswith("http") else root ~ project.url }}" style="background-image: url({{ root }}assets/img/projects/{{ project.id }}.svg);" aria-label="{{ project.name }}">
+					<span class="project-title" aria-hidden="true">{{ project.title | safe }}</span>
+				</a>
+{%- endfor %}
+			</div>
+		</div>
+	</section>
+
 	<section id="{{ t.publications_id }}" class="section section-light">
 		<div class="container">
 			<h2 class="section-title animate-box">{{ t.publications_title }}</h2>
@@ -115,19 +128,6 @@
 				</li>
 {%- endfor %}
 			</ol>
-		</div>
-	</section>
-
-	<section id="{{ t.projects_id }}" class="section section-orange">
-		<div class="container">
-			<h2 class="section-title animate-box">{{ t.projects_title }}</h2>
-			<div class="projects">
-{%- for project in projects %}
-				<a class="project project--{{ project.id }} animate-box" href="{{ project.url if project.url.startswith("http") else root ~ project.url }}" style="background-image: url({{ root }}assets/img/projects/{{ project.id }}.svg);" aria-label="{{ project.name }}">
-					<span class="project-title" aria-hidden="true">{{ project.title | safe }}</span>
-				</a>
-{%- endfor %}
-			</div>
 		</div>
 	</section>
 
