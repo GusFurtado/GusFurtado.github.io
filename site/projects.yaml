@@ -4,7 +4,7 @@
 
 - id: dab
   name: Dados Abertos Brasil
-  url: dab/index.html
+  url: https://www.gustavofurtado.com/DadosAbertosBrasil/
   title: Dados<br>Abertos<br>Brasil
 
 - id: markowizard
