@@ -14,12 +14,12 @@
 
 - id: papelada
   name: Papelada
-  url: https://github.com/GusFurtado/papelada
+  url: https://www.gustavofurtado.com/papelada/
   title: Papelada
 
 - id: gender-guesser-br
   name: Gender Guesser Brasil
-  url: https://github.com/GusFurtado/gender-guesser-br
+  url: https://www.gustavofurtado.com/gender-guesser-br/
   title: gender<em>guesser</em><small>BR</small>
 
 - id: statsjunk
@@ -29,5 +29,5 @@
 
 - id: cellmate
   name: Cellmate
-  url: https://github.com/GusFurtado/cellmate
+  url: https://www.gustavofurtado.com/cellmate/
   title: Cellmate
