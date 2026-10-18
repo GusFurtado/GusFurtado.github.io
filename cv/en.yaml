@@ -17,6 +17,7 @@ cv:
         start_date: 2025-02
         end_date: present
         location: Campinas
+        site: Clinical data pipelines and data science for healthcare R&D.
         highlights:
           - Clinical data engineering and data science for healthcare R&D projects, building data pipelines (ETL) that prepare and validate clinical data for machine learning models.
           - Integrated pipelines with workflow orchestrators, focusing on data quality, lineage and reproducibility.
@@ -26,6 +27,7 @@ cv:
         start_date: 2021-06
         end_date: 2025-01
         location: Amparo
+        site: Data pipelines and machine learning with Spark, Databricks, Airflow and dbt.
         highlights:
           - Implemented scalable pipelines with Spark, Databricks, Airflow and dbt, reducing report generation time from one week to just a few hours and enabling real-time analytics.
           - Developed machine learning models using Scikit-Learn and TensorFlow for revenue optimization, customer segmentation, product classification, and indicator forecasting, enabling faster and more accurate business decisions.
@@ -35,6 +37,7 @@ cv:
         start_date: 2018-10
         end_date: 2021-06
         location: Amparo
+        site: Flask web apps for production and logistics data.
         highlights:
           - Developed web apps in Flask with Python and SQL Server for logistics and production data visualization and analysis, including monitoring fleet cycles and routes via GPS coordinates, optimizing times and routes.
           - Supported goal management and KPIs by automating routines and training the team in visual management and daily practices.
@@ -44,6 +47,7 @@ cv:
         start_date: 2017-12
         end_date: 2018-10
         location: Amparo
+        site: Factory simulation and production optimization.
         highlights:
           - Created process simulation models for new factories, production lines, and inventory optimization, providing data-driven insights for strategic capacity expansion decisions.
           - Developed nonlinear programming models for optimizing production plans, maximizing resource usage, and reducing operational costs.
@@ -53,6 +57,7 @@ cv:
         start_date: 2011-03
         end_date: 2013-03
         location: Joinville
+        site: Time studies and process improvement.
         highlights:
           - Conducted time studies and improved manufacturing processes.
           - Developed tools to increase productivity.
@@ -64,6 +69,7 @@ cv:
         start_date: 2015-03
         end_date: 2017-02
         location: Florianópolis
+        site: Simulation-based optimization.
         highlights:
           - "Advisor: Dr. Nelson Casarotto Filho"
           - "Thesis: Procedure for Analyzing Shared Production Systems Using Simulation-Based Optimization"
@@ -73,6 +79,7 @@ cv:
         start_date: 2009-01
         end_date: 2013-12
         location: Joinville
+        site: Economic feasibility in productive maintenance.
         highlights:
           - "Advisor: Dr. Evandro Bittencourt"
           - "Final Project: Economic Feasibility Analysis for Acquiring Monitoring Software for Productive Maintenance Activities of Aluminum Injection Molding Machines"

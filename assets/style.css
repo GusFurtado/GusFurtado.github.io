@@ -77,6 +77,43 @@ a {
 	stroke: none;
 }
 
+/* Seletor de idioma */
+
+.lang-switch {
+	position: fixed;
+	top: 16px;
+	right: 16px;
+	z-index: 10;
+	display: flex;
+	gap: 4px;
+	padding: 4px;
+	font-size: 14px;
+	font-weight: 700;
+	background: rgba(255, 255, 255, 0.92);
+	border-radius: 999px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lang-switch a,
+.lang-switch span {
+	padding: 2px 10px;
+	border-radius: 999px;
+	line-height: 1.6;
+}
+
+.lang-switch a {
+	color: var(--text);
+}
+
+.lang-switch a:hover {
+	color: var(--orange);
+}
+
+.lang-switch span {
+	color: #fff;
+	background: var(--orange);
+}
+
 /* Capa */
 
 .cover {

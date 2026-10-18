@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Gerado por site/build.py a partir de site/template.html. Não editar à mão. -->
+<html lang="{{ t.html_lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gustavo Furtado</title>
+	<meta name="description" content="{{ cv.headline }}">
+	<meta name="author" content="Gustavo Furtado">
+{%- for other in languages %}
+	<link rel="alternate" hreflang="{{ other.html_lang }}" href="{{ site_url }}{{ other.path }}">
+{%- endfor %}
+	<link rel="alternate" hreflang="x-default" href="{{ site_url }}">
+{%- if lang == default_lang %}
+	<script>
+		// Visitantes com o navegador em português vão para /pt/, a menos que tenham escolhido outro idioma.
+		(function () {
+			var saved = null;
+			try { saved = localStorage.getItem("lang"); } catch (e) {}
+			var browser = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+			if (saved === "pt" || (!saved && /^pt\b/i.test(browser))) location.replace("pt/");
+		})();
+	</script>
+{%- endif %}
+	<link rel="icon" href="{{ root }}assets/favicon.ico">
+	<link rel="apple-touch-icon" href="{{ root }}assets/apple-touch-icon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Space+Mono:wght@400;700&display=swap">
+	<link rel="stylesheet" href="{{ root }}assets/style.css">
+	<script src="{{ root }}assets/main.js" defer></script>
+</head>
+<body>
+	<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+		<symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+		<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+		<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+		<symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+		<symbol id="i-graduation" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5M22 10v6"/></symbol>
+		<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+	</svg>
+
+	<nav class="lang-switch" aria-label="{{ t.language }}">
+{%- for other in languages %}
+		{% if other.code == lang %}<span aria-current="true">{{ other.label }}</span>{% else %}<a href="{{ root }}{{ other.path }}" hreflang="{{ other.html_lang }}" lang="{{ other.html_lang }}" data-lang="{{ other.code }}">{{ other.label }}</a>{% endif %}
+{%- endfor %}
+	</nav>
+
+{%- macro social_icons(extra_class="") %}
+			<ul class="social-icons{{ extra_class }}">
+				<li><a href="https://www.linkedin.com/in/gustavo-furtado/" aria-label="LinkedIn"><svg class="icon icon-fill"><use href="#i-linkedin"/></svg></a></li>
+				<li><a href="https://github.com/GusFurtado" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></li>
+				<li><a href="mailto:gustavofurtado2@gmail.com" aria-label="E-mail"><svg class="icon"><use href="#i-mail"/></svg></a></li>
+				<li><a href="https://github.com/GusFurtado/GusFurtado.github.io/blob/master/documents/README.md" aria-label="{{ t.documents }}"><svg class="icon"><use href="#i-link"/></svg></a></li>
+			</ul>
+{%- endmacro %}
+
+	<header class="cover">
+		<div class="cover-content animate-box">
+			<img class="profile-thumb" src="{{ root }}assets/img/foto.jpeg" alt="{{ t.photo_alt }}">
+			<h1><span>Gustavo Furtado</span></h1>
+			<p class="cover-subtitle">{{ cv.headline }}</p>
+{{- social_icons() }}
+		</div>
+	</header>
+
+	<section id="{{ t.about_id }}" class="section animate-box">
+		<div class="container">
+			<h2 class="section-title">{{ t.about_title }}</h2>
+			<div class="about">
+{%- for paragraph in summary %}
+				<p>{{ paragraph }}</p>
+{%- endfor %}
+{{- social_icons(" social-icons-boxed") }}
+			</div>
+		</div>
+	</section>
+
+	<section id="{{ t.resume_id }}" class="section">
+		<div class="container">
+			<h2 class="section-title animate-box">{{ t.resume_title }}</h2>
+			<ul class="timeline">
+{%- for group in timeline %}
+				<li class="timeline-section animate-box"><h3>{{ group.title }}</h3></li>
+{%- for item in group["items"] %}
+				<li class="timeline-item {{ item.side }} animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#{{ group.icon }}"/></svg></span>
+					<div class="timeline-panel">
+						<h3>{{ item.title }}</h3>
+						<span class="company">{{ item.subtitle }}</span>
+						<p>{{ item.text }}</p>
+					</div>
+				</li>
+{%- endfor %}
+{%- endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<section id="{{ t.projects_id }}" class="section section-orange">
+		<div class="container">
+			<h2 class="section-title animate-box">{{ t.projects_title }}</h2>
+			<div class="projects">
+				<a class="project animate-box" href="{{ root }}dab/index.html" style="background-image: url({{ root }}assets/img/projetos-dab.png);" aria-label="Dados Abertos Brasil"></a>
+				<a class="project animate-box" href="https://github.com/GusFurtado/Diversificador" style="background-image: url({{ root }}assets/img/projetos-diversificador.png);" aria-label="MarkoWizard"></a>
+				<a class="project animate-box" href="https://github.com/GusFurtado/cellmate" style="background-image: url({{ root }}assets/img/projetos-cellmate.png);" aria-label="Cellmate"></a>
+				<a class="project animate-box" href="https://github.com/GusFurtado/dash-charlotte" style="background-image: url({{ root }}assets/img/projetos-charlotte.png);" aria-label="Dash Charlotte"></a>
+			</div>
+		</div>
+	</section>
+
+	<a class="gototop" href="#" aria-label="{{ t.back_to_top }}"><svg class="icon"><use href="#i-arrow-up"/></svg></a>
+</body>
+</html>

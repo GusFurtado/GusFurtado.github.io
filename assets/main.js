@@ -1,4 +1,5 @@
-// Revela os blocos .animate-box ao rolar e mostra o botão de voltar ao topo.
+// Revela os blocos .animate-box ao rolar, mostra o botão de voltar ao topo
+// e lembra o idioma escolhido no seletor (lido pelo redirecionamento de /).
 
 if ("IntersectionObserver" in window) {
 	document.documentElement.classList.add("js");
@@ -17,3 +18,11 @@ const gototop = document.querySelector(".gototop");
 window.addEventListener("scroll", () => {
 	gototop.classList.toggle("active", window.scrollY > 200);
 }, { passive: true });
+
+document.querySelectorAll(".lang-switch a[data-lang]").forEach((link) => {
+	link.addEventListener("click", () => {
+		try {
+			localStorage.setItem("lang", link.dataset.lang);
+		} catch (e) {}
+	});
+});

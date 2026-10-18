@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<!-- Gerado por site/build.py a partir de site/template.html. Não editar à mão. -->
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Gustavo Furtado</title>
-	<meta name="description" content="Cientista de Dados">
+	<meta name="description" content="Data Scientist">
 	<meta name="author" content="Gustavo Furtado">
+	<link rel="alternate" hreflang="en" href="https://www.gustavofurtado.com/">
+	<link rel="alternate" hreflang="pt-BR" href="https://www.gustavofurtado.com/pt/">
+	<link rel="alternate" hreflang="x-default" href="https://www.gustavofurtado.com/">
+	<script>
+		// Visitantes com o navegador em português vão para /pt/, a menos que tenham escolhido outro idioma.
+		(function () {
+			var saved = null;
+			try { saved = localStorage.getItem("lang"); } catch (e) {}
+			var browser = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+			if (saved === "pt" || (!saved && /^pt\b/i.test(browser))) location.replace("pt/");
+		})();
+	</script>
 	<link rel="icon" href="assets/favicon.ico">
 	<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,117 +38,118 @@
 		<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
 	</svg>
 
+	<nav class="lang-switch" aria-label="Language">
+		<span aria-current="true">EN</span>
+		<a href="pt/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">PT</a>
+	</nav>
+
 	<header class="cover">
 		<div class="cover-content animate-box">
-			<img class="profile-thumb" src="assets/img/foto.jpeg" alt="Foto de Gustavo Furtado">
+			<img class="profile-thumb" src="assets/img/foto.jpeg" alt="Photo of Gustavo Furtado">
 			<h1><span>Gustavo Furtado</span></h1>
-			<p class="cover-subtitle">Cientista de Dados</p>
+			<p class="cover-subtitle">Data Scientist</p>
 			<ul class="social-icons">
 				<li><a href="https://www.linkedin.com/in/gustavo-furtado/" aria-label="LinkedIn"><svg class="icon icon-fill"><use href="#i-linkedin"/></svg></a></li>
 				<li><a href="https://github.com/GusFurtado" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></li>
 				<li><a href="mailto:gustavofurtado2@gmail.com" aria-label="E-mail"><svg class="icon"><use href="#i-mail"/></svg></a></li>
-				<li><a href="https://github.com/GusFurtado/GusFurtado.github.io/blob/master/documents/README.md" aria-label="Documentos"><svg class="icon"><use href="#i-link"/></svg></a></li>
+				<li><a href="https://github.com/GusFurtado/GusFurtado.github.io/blob/master/documents/README.md" aria-label="Documents"><svg class="icon"><use href="#i-link"/></svg></a></li>
 			</ul>
 		</div>
 	</header>
 
-	<section id="sobre" class="section animate-box">
+	<section id="about" class="section animate-box">
 		<div class="container">
-			<h2 class="section-title">Sobre mim</h2>
+			<h2 class="section-title">About me</h2>
 			<div class="about">
-				<!-- about:start -->
-				<p>Cientista de dados com foco em pipelines de dados de ponta a ponta (ingestão, ETL, qualidade e orquestração) que alimentam modelos de machine learning e análises. Hoje atuo em P&amp;D na Samsung Research Brazil; antes, foram oito anos na Ypê levando pipelines, machine learning e simulação para a manufatura e a área comercial. Mestre em Engenharia de Produção e Pesquisa Operacional pela UFSC. Python, SQL, Spark, Databricks, Airflow e dbt.</p>
-				<!-- about:end -->
-				<ul class="social-icons social-icons-boxed">
-					<li><a href="https://www.linkedin.com/in/gustavo-furtado/" aria-label="LinkedIn"><svg class="icon icon-fill"><use href="#i-linkedin"/></svg></a></li>
-					<li><a href="https://github.com/GusFurtado" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></li>
-					<li><a href="mailto:gustavofurtado2@gmail.com" aria-label="E-mail"><svg class="icon"><use href="#i-mail"/></svg></a></li>
-					<li><a href="https://github.com/GusFurtado/GusFurtado.github.io/blob/master/documents/README.md" aria-label="Documentos"><svg class="icon"><use href="#i-link"/></svg></a></li>
-				</ul>
+				<p>Data scientist focused on end-to-end data pipelines (ingestion, ETL, data quality and orchestration) that feed machine learning models and analytics. Currently in R&amp;D at Samsung Research Brazil; previously spent eight years at Ypê bringing pipelines, machine learning and simulation to manufacturing and sales. M.Sc. in Production Engineering and Operations Research from the Federal University of Santa Catarina. Python, SQL, Spark, Databricks, Airflow and dbt.</p>
+			<ul class="social-icons social-icons-boxed">
+				<li><a href="https://www.linkedin.com/in/gustavo-furtado/" aria-label="LinkedIn"><svg class="icon icon-fill"><use href="#i-linkedin"/></svg></a></li>
+				<li><a href="https://github.com/GusFurtado" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></li>
+				<li><a href="mailto:gustavofurtado2@gmail.com" aria-label="E-mail"><svg class="icon"><use href="#i-mail"/></svg></a></li>
+				<li><a href="https://github.com/GusFurtado/GusFurtado.github.io/blob/master/documents/README.md" aria-label="Documents"><svg class="icon"><use href="#i-link"/></svg></a></li>
+			</ul>
 			</div>
 		</div>
 	</section>
 
-	<section id="curriculo" class="section">
+	<section id="resume" class="section">
 		<div class="container">
-			<h2 class="section-title animate-box">Meu currículo</h2>
+			<h2 class="section-title animate-box">Resume</h2>
 			<ul class="timeline">
-			<!-- cv:start -->
-			<li class="timeline-section animate-box"><h3>Experiência Profissional</h3></li>
-			<li class="timeline-item left animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Especialista de P&amp;D em Ciência de Dados</h3>
-					<span class="company">Samsung Research Brazil - 2025 - Atual</span>
-					<p>Pipelines e ciência de dados clínicos para P&amp;D em saúde.</p>
-				</div>
-			</li>
-			<li class="timeline-item right animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Analista Sr. de Big Data e Ciência de Dados</h3>
-					<span class="company">Ypê - 2021 - 2025</span>
-					<p>Pipelines de dados e machine learning com Spark, Databricks, Airflow e dbt.</p>
-				</div>
-			</li>
-			<li class="timeline-item left animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Analista de Dados de Manufatura</h3>
-					<span class="company">Ypê - 2018 - 2021</span>
-					<p>Web apps em Flask para dados de produção e logística.</p>
-				</div>
-			</li>
-			<li class="timeline-item right animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Analista de Simulação Industrial</h3>
-					<span class="company">Ypê - 2017 - 2018</span>
-					<p>Simulação de fábricas e otimização da produção.</p>
-				</div>
-			</li>
-			<li class="timeline-item left animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Estagiário de Engenharia de Processos</h3>
-					<span class="company">Wetzel S/A - 2011 - 2013</span>
-					<p>Cronoanálise e melhoria de processos.</p>
-				</div>
-			</li>
-			<li class="timeline-section animate-box"><h3>Formação Acadêmica</h3></li>
-			<li class="timeline-item right animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-graduation"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Mestrado em Engenharia de Produção e Pesquisa Operacional</h3>
-					<span class="company">Universidade Federal de Santa Catarina - 2015 - 2017</span>
-					<p>Otimização baseada em simulação.</p>
-				</div>
-			</li>
-			<li class="timeline-item left animate-box">
-				<span class="timeline-badge"><svg class="icon"><use href="#i-graduation"/></svg></span>
-				<div class="timeline-panel">
-					<h3>Bacharelado em Engenharia de Produção e Sistemas</h3>
-					<span class="company">Universidade do Estado de Santa Catarina - 2009 - 2013</span>
-					<p>Viabilidade econômica em manutenção produtiva.</p>
-				</div>
-			</li>
-			<!-- cv:end -->
+				<li class="timeline-section animate-box"><h3>Professional Experience</h3></li>
+				<li class="timeline-item left animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Data Science R&amp;D Specialist</h3>
+						<span class="company">Samsung Research Brazil - 2025 - Present</span>
+						<p>Clinical data pipelines and data science for healthcare R&amp;D.</p>
+					</div>
+				</li>
+				<li class="timeline-item right animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Senior Big Data and Data Science Analyst</h3>
+						<span class="company">Ypê - 2021 - 2025</span>
+						<p>Data pipelines and machine learning with Spark, Databricks, Airflow and dbt.</p>
+					</div>
+				</li>
+				<li class="timeline-item left animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Manufacturing Data Analyst</h3>
+						<span class="company">Ypê - 2018 - 2021</span>
+						<p>Flask web apps for production and logistics data.</p>
+					</div>
+				</li>
+				<li class="timeline-item right animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Industrial Simulation Analyst</h3>
+						<span class="company">Ypê - 2017 - 2018</span>
+						<p>Factory simulation and production optimization.</p>
+					</div>
+				</li>
+				<li class="timeline-item left animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Process Engineering Intern</h3>
+						<span class="company">Wetzel S/A - 2011 - 2013</span>
+						<p>Time studies and process improvement.</p>
+					</div>
+				</li>
+				<li class="timeline-section animate-box"><h3>Education</h3></li>
+				<li class="timeline-item right animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-graduation"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Master&#39;s in Production Engineering and Operations Research</h3>
+						<span class="company">Federal University of Santa Catarina - 2015 - 2017</span>
+						<p>Simulation-based optimization.</p>
+					</div>
+				</li>
+				<li class="timeline-item left animate-box">
+					<span class="timeline-badge"><svg class="icon"><use href="#i-graduation"/></svg></span>
+					<div class="timeline-panel">
+						<h3>Bachelor&#39;s in Production Engineering and Systems</h3>
+						<span class="company">State University of Santa Catarina - 2009 - 2013</span>
+						<p>Economic feasibility in productive maintenance.</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>
 
-	<section id="projetos" class="section section-orange">
+	<section id="projects" class="section section-orange">
 		<div class="container">
-			<h2 class="section-title animate-box">Projetos</h2>
+			<h2 class="section-title animate-box">Projects</h2>
 			<div class="projects">
 				<a class="project animate-box" href="dab/index.html" style="background-image: url(assets/img/projetos-dab.png);" aria-label="Dados Abertos Brasil"></a>
-				<a class="project animate-box" href="https://github.com/GusFurtado/Diversificador" style="background-image: url(assets/img/projetos-diversificador.png);" aria-label="Diversificador de Portfólio"></a>
+				<a class="project animate-box" href="https://github.com/GusFurtado/Diversificador" style="background-image: url(assets/img/projetos-diversificador.png);" aria-label="MarkoWizard"></a>
 				<a class="project animate-box" href="https://github.com/GusFurtado/cellmate" style="background-image: url(assets/img/projetos-cellmate.png);" aria-label="Cellmate"></a>
 				<a class="project animate-box" href="https://github.com/GusFurtado/dash-charlotte" style="background-image: url(assets/img/projetos-charlotte.png);" aria-label="Dash Charlotte"></a>
 			</div>
 		</div>
 	</section>
 
-	<a class="gototop" href="#" aria-label="Voltar ao topo"><svg class="icon"><use href="#i-arrow-up"/></svg></a>
+	<a class="gototop" href="#" aria-label="Back to top"><svg class="icon"><use href="#i-arrow-up"/></svg></a>
 </body>
 </html>

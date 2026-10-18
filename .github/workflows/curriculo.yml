@@ -1,14 +1,14 @@
-# Gera os currículos a partir de cv/pt.yaml e cv/en.yaml:
-# - PDFs em documents/curriculum/ (RenderCV)
-# - seção "Meu currículo" do index.html (cv/build_site.py)
+# Gera, a partir de cv/*.yaml e site/:
+# - os PDFs do currículo em documents/curriculum/ (RenderCV)
+# - as páginas do site: index.html (inglês) e pt/index.html (site/build.py)
 # e faz commit do resultado na própria branch.
 
-name: Currículo
+name: Site e currículo
 
 on:
   push:
     branches: [master]
-    paths: ["cv/**"]
+    paths: ["cv/**", "site/**"]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependências
-        run: pip install "rendercv[full]==2.8" pyyaml
+        run: pip install "rendercv[full]==2.8" pyyaml jinja2
 
       - name: Gerar PDFs
         working-directory: cv
@@ -33,14 +33,14 @@ jobs:
           rendercv render pt.yaml -nomd -nohtml -nopng
           rendercv render en.yaml -nomd -nohtml -nopng
 
-      - name: Gerar seção do site
-        run: python cv/build_site.py
+      - name: Gerar páginas do site
+        run: python site/build.py
 
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add documents/curriculum index.html
+          git add documents/curriculum index.html pt
           git diff --cached --quiet && exit 0
-          git commit -m "Gerar currículos a partir de cv/"
+          git commit -m "Gerar site e currículos a partir de cv/ e site/"
           git push

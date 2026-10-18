@@ -1,0 +1,40 @@
+# Textos fixos do site, por idioma. O conteúdo do currículo vem de cv/<idioma>.yaml.
+# A ordem define a ordem no seletor de idioma; o primeiro idioma é o padrão (servido em /).
+
+en:
+  label: EN
+  html_lang: en
+  language: Language
+  photo_alt: Photo of Gustavo Furtado
+  documents: Documents
+  back_to_top: Back to top
+  about_id: about
+  about_title: About me
+  resume_id: resume
+  resume_title: Resume
+  projects_id: projects
+  projects_title: Projects
+  present: Present
+  degree_in: in
+  summary_section: Summary
+  experience_section: Professional Experience
+  education_section: Education
+
+pt:
+  label: PT
+  html_lang: pt-BR
+  language: Idioma
+  photo_alt: Foto de Gustavo Furtado
+  documents: Documentos
+  back_to_top: Voltar ao topo
+  about_id: sobre
+  about_title: Sobre mim
+  resume_id: curriculo
+  resume_title: Meu currículo
+  projects_id: projetos
+  projects_title: Projetos
+  present: Atual
+  degree_in: em
+  summary_section: Resumo
+  experience_section: Experiência Profissional
+  education_section: Formação Acadêmica
