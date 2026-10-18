@@ -1,6 +1,6 @@
 # [Meu Site](https://www.gustavofurtado.com/)
 
-Repositório para os arquivos do meu website, que inclui **[currículo](https://www.gustavofurtado.com/pt/#curriculo)**, **[trabalhos acadêmicos](documents/README.md)** e **[projetos diversos](https://www.gustavofurtado.com/pt/#projetos)**.
+Repositório para os arquivos do meu website, que inclui **[currículo](https://www.gustavofurtado.com/pt/#curriculo)**, **[publicações](https://www.gustavofurtado.com/pt/#publicacoes)** e **[projetos diversos](https://www.gustavofurtado.com/pt/#projetos)**.
 
 Sinceramente, você não encontrará nada interessante aqui. Mas que tal dar uma olhada no meu projeto **[Dados Abertos Brasil](https://github.com/GusFurtado/DadosAbertosBrasil)**?
 

@@ -37,6 +37,7 @@ def timeline(sections, t):
             "title": job["position"],
             "subtitle": f"{job['company']} - {period(job, t['present'])}",
             "text": job["site"],
+            "pdf": None,
         }
         for job in sections[t["experience_section"]]
     ]
@@ -45,6 +46,7 @@ def timeline(sections, t):
             "title": f"{course['degree']} {t['degree_in']} {course['area']}",
             "subtitle": f"{course['institution']} - {period(course, t['present'])}",
             "text": course["site"],
+            "pdf": course.get("pdf"),
         }
         for course in sections[t["education_section"]]
     ]
@@ -54,6 +56,26 @@ def timeline(sections, t):
     return [
         {"title": t["experience_section"], "icon": "i-briefcase", "items": jobs},
         {"title": t["education_section"], "icon": "i-graduation", "items": courses},
+    ]
+
+
+def author(name):
+    # O RenderCV marca o próprio nome em negrito com **...**.
+    me = name.startswith("**") and name.endswith("**")
+    return {"name": name.strip("*"), "me": me}
+
+
+def publications(sections, t):
+    return [
+        {
+            "title": pub["title"],
+            "authors": [author(name) for name in pub["authors"]],
+            "journal": pub["journal"],
+            "year": str(pub["date"])[:4],
+            "doi": pub.get("doi"),
+            "pdf": pub["pdf"],
+        }
+        for pub in sections[t["publications_section"]]
     ]
 
 
@@ -95,6 +117,7 @@ def main():
             summary=cv["sections"][t["summary_section"]],
             timeline=timeline(cv["sections"], t),
             projects=projects,
+            publications=publications(cv["sections"], t),
         )
         (out_dir / "index.html").write_text(html, encoding="utf-8")
 

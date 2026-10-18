@@ -65,6 +65,7 @@ cv:
     Education:
       - institution: Federal University of Santa Catarina
         degree: "Master's"
+        pdf: documents/artigos/UFSC.pdf
         area: Production Engineering and Operations Research
         start_date: 2015-03
         end_date: 2017-02
@@ -75,6 +76,7 @@ cv:
           - "Thesis: Procedure for Analyzing Shared Production Systems Using Simulation-Based Optimization"
       - institution: State University of Santa Catarina
         degree: "Bachelor's"
+        pdf: documents/artigos/UDESC.pdf
         area: Production Engineering and Systems
         start_date: 2009-01
         end_date: 2013-12
@@ -108,6 +110,7 @@ cv:
           - Enzo Morosini Frazzon
         journal: "Gestão & Produção, 27(1)"
         date: 2020-03
+        pdf: documents/artigos/GP.pdf
         doi: 10.1590/0104-530X3718-20
       - title: "Métodos de Simulação-Otimização Aplicados a Internalização de Processos Produtivos"
         authors:
@@ -115,6 +118,7 @@ cv:
           - Nelson Casarotto Filho
         journal: "5th Production Engineering Symposium (SIMEP)"
         date: 2017-05
+        pdf: documents/artigos/SIMEP5.pdf
       - title: "Simulation-Based Analysis of “One Product Integrated Manufacturing” Systems"
         authors:
           - "**Gustavo Furtado da Silva**"
@@ -122,6 +126,7 @@ cv:
           - Nelson Casarotto Filho
         journal: "9th International Symposium on Industrial Engineering"
         date: 2016-10
+        pdf: documents/artigos/SIII.pdf
       - title: "A Proposal for a Simulation-Optimization Method to Support Decision-Making in the Internalization of Production Processes"
         authors:
           - "**Gustavo Furtado da Silva**"
@@ -129,6 +134,7 @@ cv:
           - Nelson Casarotto Filho
         journal: "Exacta, 13(3)"
         date: 2015-10
+        pdf: documents/artigos/Exacta.pdf
         doi: 10.5585/ExactaEP.v13n3.5967
       - title: "Análise de Viabilidade Financeira para a Aquisição de um Software de Monitoramento das Atividades de Manutenção Produtiva de Injetoras de Alumínio"
         authors:
@@ -137,6 +143,7 @@ cv:
           - Valdésio Benevenutti
         journal: "3rd Production Engineering Symposium (SIMEP)"
         date: 2015-05
+        pdf: documents/artigos/SIMEP3.pdf
 locale:
   language: english
   month_abbreviations: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]

@@ -6,12 +6,17 @@ en:
   html_lang: en
   language: Language
   photo_alt: Photo of Gustavo Furtado
-  documents: Documents
   back_to_top: Back to top
   about_id: about
   about_title: About me
   resume_id: resume
   resume_title: Resume
+  publications_id: publications
+  publications_title: Publications
+  publications_section: Publications
+  download_cv: Download CV (PDF)
+  cv_pdf: documents/curriculum/Gustavo Furtado - Data Scientist.pdf
+  read_pdf: Read (PDF)
   projects_id: projects
   projects_title: Projects
   present: Present
@@ -25,12 +30,17 @@ pt:
   html_lang: pt-BR
   language: Idioma
   photo_alt: Foto de Gustavo Furtado
-  documents: Documentos
   back_to_top: Voltar ao topo
   about_id: sobre
   about_title: Sobre mim
   resume_id: curriculo
   resume_title: Meu currículo
+  publications_id: publicacoes
+  publications_title: Publicações
+  publications_section: Publicações
+  download_cv: Baixar currículo (PDF)
+  cv_pdf: documents/curriculum/Gustavo Furtado - Cientista de Dados.pdf
+  read_pdf: Ler (PDF)
   projects_id: projetos
   projects_title: Projetos
   present: Atual
