@@ -88,7 +88,7 @@ a {
 	padding: 60px 15px;
 	overflow: hidden;
 	text-align: center;
-	background: url(../images/cover_bg_3.jpg) center / cover fixed;
+	background: url(img/cover.jpg) center / cover fixed;
 }
 
 .cover::before {
