@@ -13,3 +13,5 @@ O site tem duas versões: inglês em `/` (padrão) e português em `/pt/`. Quem 
 - `cv/en.yaml` e `cv/pt.yaml`: currículo (fonte única), lido pelo site e pelo [RenderCV](https://rendercv.com/)
 
 A cada push que altera `cv/` ou `site/`, a GitHub Action `Site e currículo` roda `site/build.py` (gera `index.html` e `pt/index.html`) e o RenderCV (gera os PDFs em `documents/curriculum/`), e faz commit do resultado. Não edite `index.html` nem `pt/index.html` à mão.
+
+Para o LinkedIn, que não tem API para editar o perfil, `python cv/linkedin.py pt` (ou `en`) imprime o currículo no formato das seções do perfil, para copiar e colar.
