@@ -2,6 +2,7 @@
 
 - Textos fixos: site/strings.yaml. O primeiro idioma é o padrão e vai para /index.html;
   os demais vão para /<idioma>/index.html.
+- Projetos: site/projects.yaml (iguais nos dois idiomas).
 - Currículo: cv/<idioma>.yaml. Cada entrada usa o campo `site` (uma frase curta),
   que o RenderCV ignora no PDF.
 
@@ -58,6 +59,7 @@ def timeline(sections, t):
 
 def main():
     strings = load_yaml(SITE_DIR / "strings.yaml")
+    projects = load_yaml(SITE_DIR / "projects.yaml")
     default_lang = next(iter(strings))
     languages = [
         {
@@ -92,6 +94,7 @@ def main():
             root="../" if language["path"] else "",
             summary=cv["sections"][t["summary_section"]],
             timeline=timeline(cv["sections"], t),
+            projects=projects,
         )
         (out_dir / "index.html").write_text(html, encoding="utf-8")
 

@@ -26,7 +26,7 @@
 	<link rel="apple-touch-icon" href="{{ root }}assets/apple-touch-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Space+Mono:wght@400;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,200;0,700;0,800;1,600&family=Space+Mono:wght@400;700&display=swap">
 	<link rel="stylesheet" href="{{ root }}assets/style.css">
 	<script src="{{ root }}assets/main.js" defer></script>
 </head>
@@ -102,10 +102,11 @@
 		<div class="container">
 			<h2 class="section-title animate-box">{{ t.projects_title }}</h2>
 			<div class="projects">
-				<a class="project animate-box" href="{{ root }}dab/index.html" style="background-image: url({{ root }}assets/img/projetos-dab.png);" aria-label="Dados Abertos Brasil"></a>
-				<a class="project animate-box" href="https://github.com/GusFurtado/Diversificador" style="background-image: url({{ root }}assets/img/projetos-diversificador.png);" aria-label="MarkoWizard"></a>
-				<a class="project animate-box" href="https://github.com/GusFurtado/cellmate" style="background-image: url({{ root }}assets/img/projetos-cellmate.png);" aria-label="Cellmate"></a>
-				<a class="project animate-box" href="https://github.com/GusFurtado/dash-charlotte" style="background-image: url({{ root }}assets/img/projetos-charlotte.png);" aria-label="Dash Charlotte"></a>
+{%- for project in projects %}
+				<a class="project project--{{ project.id }} animate-box" href="{{ project.url if project.url.startswith("http") else root ~ project.url }}" style="background-image: url({{ root }}assets/img/projects/{{ project.id }}.svg);" aria-label="{{ project.name }}">
+					<span class="project-title" aria-hidden="true">{{ project.title | safe }}</span>
+				</a>
+{%- endfor %}
 			</div>
 		</div>
 	</section>

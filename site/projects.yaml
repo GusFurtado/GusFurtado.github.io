@@ -1,0 +1,24 @@
+# Cards da seção Projetos. O fundo de cada card é assets/img/projects/<id>.svg e o
+# título é texto (HTML), estilizado em assets/style.css pela classe project--<id>.
+# URLs sem "http" são relativas à raiz do site.
+
+- id: dab
+  name: Dados Abertos Brasil
+  url: dab/index.html
+  title: Dados<br>Abertos<br>Brasil
+
+- id: markowizard
+  name: MarkoWizard
+  url: https://www.gustavofurtado.com/MarkoWizard/
+  title: Marko<em>Wizard</em>
+
+- id: statsjunk
+  name: statsjunk
+  url: https://www.gustavofurtado.com/statsjunk/
+  title: stats<em>junk</em>
+
+- id: cellmate
+  name: Cellmate
+  url: https://github.com/GusFurtado/cellmate
+  title: Cellmate
+

@@ -346,10 +346,80 @@ a {
 	gap: 12px;
 }
 
+/* Cada card é um fundo em SVG (assets/img/projects/<id>.svg) com o nome em texto por cima. */
 .project {
-	display: block;
-	height: 270px;
+	display: grid;
+	place-items: center;
+	aspect-ratio: 1;
+	overflow: hidden;
 	background: center / cover no-repeat;
+	container-type: inline-size;
+	transition: transform 0.2s;
+}
+
+.project:hover,
+.project:focus-visible {
+	transform: translateY(-3px);
+}
+
+.project-title {
+	padding: 0 1rem;
+	font-family: "Montserrat", "Segoe UI", sans-serif;
+	line-height: 1.05;
+	text-align: center;
+}
+
+.project-title em {
+	font-style: normal;
+}
+
+.project--dab .project-title {
+	font-size: 17cqw;
+	font-weight: 800;
+	letter-spacing: -0.015em;
+	color: #002776;
+	-webkit-text-stroke: 0.13em #fff;
+	paint-order: stroke fill;
+}
+
+.project--markowizard {
+	background-color: #001d63;
+}
+
+.project--markowizard .project-title {
+	font-size: 12cqw;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: #fff;
+	text-shadow: 0 2px 16px rgba(0, 15, 50, 0.45);
+}
+
+.project--markowizard .project-title em {
+	color: #a8ecee;
+}
+
+.project--statsjunk {
+	background-color: #330033;
+	background-size: 200px;
+	background-repeat: repeat;
+}
+
+.project--statsjunk .project-title {
+	font-family: "Courier New", monospace;
+	font-size: 14cqw;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: #f7f7f7;
+}
+
+.project--statsjunk .project-title em {
+	color: #42d4d7;
+}
+
+.project--cellmate .project-title {
+	font-size: 19cqw;
+	font-weight: 200;
+	color: #fff;
 }
 
 /* Voltar ao topo */
@@ -404,11 +474,7 @@ a {
 
 @media (max-width: 991px) {
 	.projects {
-		grid-template-columns: 1fr;
-	}
-
-	.project {
-		height: 400px;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.timeline::before {
@@ -478,7 +544,7 @@ a {
 }
 
 @media (max-width: 480px) {
-	.project {
-		height: 270px;
+	.projects {
+		grid-template-columns: 1fr;
 	}
 }
