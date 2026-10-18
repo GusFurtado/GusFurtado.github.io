@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b4f3c"/>
+      <stop offset="1" stop-color="#062a22"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <g font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="600" fill="#ffffff" transform="rotate(-8 400 250)">
+    <text x="-40" y="40" font-size="26" fill-opacity="0.11">Juraci</text>
+    <text x="86.72" y="40" font-size="22" fill-opacity="0.08">Rosa</text>
+    <text x="171.28" y="40" font-size="22" fill-opacity="0.11">Pedro</text>
+    <text x="269.48" y="40" font-size="36" fill-opacity="0.11">Aldair</text>
+    <text x="433.4" y="40" font-size="26" fill-opacity="0.08">Antônio</text>
+    <text x="576.24" y="40" font-size="30" fill-opacity="0.11">Ana</text>
+    <text x="662.04" y="40" font-size="30" fill-opacity="0.11">Gustavo</text>
+    <text x="30" y="98" font-size="30" fill-opacity="0.14">Luiza</text>
+    <text x="153.0" y="98" font-size="36" fill-opacity="0.11">Maria</text>
+    <text x="294.6" y="98" font-size="22" fill-opacity="0.14">Lucas</text>
+    <text x="392.8" y="98" font-size="36" fill-opacity="0.18">Davi</text>
+    <text x="512.08" y="98" font-size="26" fill-opacity="0.11">Beatriz</text>
+    <text x="654.9200000000001" y="98" font-size="22" fill-opacity="0.18">Paulo</text>
+    <text x="753.1200000000001" y="98" font-size="26" fill-opacity="0.08">João</text>
+    <text x="-40" y="156" font-size="26" fill-opacity="0.11">Alda</text>
+    <text x="54.480000000000004" y="156" font-size="26" fill-opacity="0.18">Adair</text>
+    <text x="165.07999999999998" y="156" font-size="22" fill-opacity="0.08">Francisco</text>
+    <text x="317.84" y="156" font-size="30" fill-opacity="0.18">José</text>
+    <text x="422.24" y="156" font-size="22" fill-opacity="0.08">Darci</text>
+    <text x="520.44" y="156" font-size="26" fill-opacity="0.11">Carlos</text>
+    <text x="647.1600000000001" y="156" font-size="30" fill-opacity="0.08">Claudete</text>
+    <text x="30" y="214" font-size="22" fill-opacity="0.18">Iracema</text>
+    <text x="155.48000000000002" y="214" font-size="22" fill-opacity="0.08">Jaci</text>
+    <text x="240.04000000000002" y="214" font-size="36" fill-opacity="0.14">Jacira</text>
+    <text x="403.96000000000004" y="214" font-size="26" fill-opacity="0.14">Joana</text>
+    <text x="514.5600000000001" y="214" font-size="36" fill-opacity="0.18">Enzo</text>
+    <text x="633.84" y="214" font-size="26" fill-opacity="0.14">Zilda</text>
+    <text x="744.44" y="214" font-size="26" fill-opacity="0.18">Valentina</text>
+    <text x="-40" y="272" font-size="26" fill-opacity="0.18">Rafael</text>
+    <text x="86.72" y="272" font-size="22" fill-opacity="0.18">Ivani</text>
+    <text x="184.92000000000002" y="272" font-size="36" fill-opacity="0.14">Juraci</text>
+    <text x="348.84000000000003" y="272" font-size="22" fill-opacity="0.11">Rosa</text>
+    <text x="433.40000000000003" y="272" font-size="36" fill-opacity="0.08">Pedro</text>
+    <text x="575.0" y="272" font-size="26" fill-opacity="0.14">Aldair</text>
+    <text x="701.72" y="272" font-size="22" fill-opacity="0.11">Antônio</text>
+    <text x="30" y="330" font-size="30" fill-opacity="0.11">Ana</text>
+    <text x="115.8" y="330" font-size="30" fill-opacity="0.11">Gustavo</text>
+    <text x="276.0" y="330" font-size="36" fill-opacity="0.11">Luiza</text>
+    <text x="417.6" y="330" font-size="22" fill-opacity="0.18">Maria</text>
+    <text x="515.8000000000001" y="330" font-size="36" fill-opacity="0.11">Lucas</text>
+    <text x="657.4000000000001" y="330" font-size="26" fill-opacity="0.11">Davi</text>
+    <text x="751.8800000000001" y="330" font-size="36" fill-opacity="0.18">Beatriz</text>
+    <text x="-40" y="388" font-size="30" fill-opacity="0.18">Paulo</text>
+    <text x="83.0" y="388" font-size="26" fill-opacity="0.14">João</text>
+    <text x="177.48000000000002" y="388" font-size="30" fill-opacity="0.08">Alda</text>
+    <text x="281.88" y="388" font-size="30" fill-opacity="0.08">Adair</text>
+    <text x="404.88" y="388" font-size="30" fill-opacity="0.18">Francisco</text>
+    <text x="602.28" y="388" font-size="36" fill-opacity="0.08">José</text>
+    <text x="721.56" y="388" font-size="36" fill-opacity="0.14">Darci</text>
+    <text x="30" y="446" font-size="30" fill-opacity="0.08">Carlos</text>
+    <text x="171.6" y="446" font-size="22" fill-opacity="0.11">Claudete</text>
+    <text x="310.72" y="446" font-size="22" fill-opacity="0.08">Iracema</text>
+    <text x="436.20000000000005" y="446" font-size="30" fill-opacity="0.14">Jaci</text>
+    <text x="540.6" y="446" font-size="22" fill-opacity="0.11">Jacira</text>
+    <text x="652.44" y="446" font-size="30" fill-opacity="0.11">Joana</text>
+    <text x="775.44" y="446" font-size="36" fill-opacity="0.14">Enzo</text>
+    <text x="-40" y="504" font-size="36" fill-opacity="0.11">Zilda</text>
+    <text x="101.6" y="504" font-size="36" fill-opacity="0.14">Valentina</text>
+    <text x="332.48" y="504" font-size="22" fill-opacity="0.14">Rafael</text>
+    <text x="444.32000000000005" y="504" font-size="22" fill-opacity="0.11">Ivani</text>
+    <text x="542.5200000000001" y="504" font-size="36" fill-opacity="0.08">Juraci</text>
+    <text x="706.44" y="504" font-size="30" fill-opacity="0.08">Rosa</text>
+    <text x="810.84" y="504" font-size="22" fill-opacity="0.14">Pedro</text>
+  </g>
+</svg>

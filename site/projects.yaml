@@ -12,6 +12,16 @@
   url: https://www.gustavofurtado.com/MarkoWizard/
   title: Marko<em>Wizard</em>
 
+- id: papelada
+  name: Papelada
+  url: https://github.com/GusFurtado/papelada
+  title: Papelada
+
+- id: gender-guesser-br
+  name: Gender Guesser Brasil
+  url: https://github.com/GusFurtado/gender-guesser-br
+  title: gender<em>guesser</em><small>BR</small>
+
 - id: statsjunk
   name: statsjunk
   url: https://www.gustavofurtado.com/statsjunk/
@@ -21,4 +31,3 @@
   name: Cellmate
   url: https://github.com/GusFurtado/cellmate
   title: Cellmate
-

@@ -406,7 +406,7 @@ a {
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 12px;
 }
 
@@ -414,7 +414,7 @@ a {
 .project {
 	display: grid;
 	place-items: center;
-	aspect-ratio: 1;
+	aspect-ratio: 16 / 10;
 	overflow: hidden;
 	background: center / cover no-repeat;
 	container-type: inline-size;
@@ -438,7 +438,7 @@ a {
 }
 
 .project--dab .project-title {
-	font-size: 17cqw;
+	font-size: clamp(1.6rem, 15cqw, 3rem);
 	font-weight: 800;
 	letter-spacing: -0.015em;
 	color: #002776;
@@ -451,7 +451,7 @@ a {
 }
 
 .project--markowizard .project-title {
-	font-size: 12cqw;
+	font-size: clamp(1.5rem, 13cqw, 2.7rem);
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	color: #fff;
@@ -470,7 +470,7 @@ a {
 
 .project--statsjunk .project-title {
 	font-family: "Courier New", monospace;
-	font-size: 14cqw;
+	font-size: clamp(1.4rem, 12cqw, 2.5rem);
 	font-weight: 700;
 	letter-spacing: -0.01em;
 	color: #f7f7f7;
@@ -481,9 +481,39 @@ a {
 }
 
 .project--cellmate .project-title {
-	font-size: 19cqw;
+	font-size: clamp(1.9rem, 21cqw, 3.7rem);
 	font-weight: 200;
 	color: #fff;
+}
+
+.project--papelada .project-title {
+	font-size: clamp(1.6rem, 14cqw, 2.8rem);
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: #fff;
+	text-shadow: 0 2px 16px rgba(12, 16, 22, 0.8);
+}
+
+.project--gender-guesser-br .project-title {
+	font-size: clamp(1.2rem, 9cqw, 2.1rem);
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	color: #fff;
+	text-shadow: 0 2px 12px rgba(6, 42, 34, 0.9);
+}
+
+.project--gender-guesser-br .project-title em {
+	color: #7ee2b8;
+}
+
+.project--gender-guesser-br .project-title small {
+	margin-left: 0.25em;
+	padding: 0.05em 0.3em;
+	font-size: 0.5em;
+	vertical-align: middle;
+	color: #062a22;
+	background: #ffdf00;
+	border-radius: 0.2em;
 }
 
 /* Voltar ao topo */
