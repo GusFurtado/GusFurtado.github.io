@@ -1,0 +1,147 @@
+/*
+ * Identidade visual de Gustavo Furtado: "cartaz de comício".
+ * Cartaz político retrô impresso em serigrafia: amarelo de fundo, tinta marinho,
+ * laranja como segunda cor de impressão (sombra deslocada e retícula).
+ *
+ * Fonte única das cores, tipos e gestos. Site, widgets e posts copiam daqui.
+ * Fora do escopo: cards e documentação dos projetos, currículo em PDF.
+ *
+ * Fontes (Google Fonts), carregadas pela página:
+ *   Big+Shoulders+Display:wght@700;900
+ *   Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400
+ *
+ * Regras:
+ * - O nome é sempre "Gustavo Furtado", por extenso. Nada de "G. Furtado" ou monograma.
+ * - Laranja nunca é cor de texto sobre amarelo ou papel (2,2:1). Ele só imprime
+ *   sombra, retícula e fundos com texto marinho por cima (4,5:1).
+ * - Inclinação e sombra deslocada só no título principal de cada página ou peça.
+ *   Títulos de seção ficam retos e sem sombra.
+ * - Retícula: no máximo uma por tela, sempre atrás do conteúdo, nunca atrás de texto corrido.
+ * - Display (Big Shoulders) sempre em caixa alta. Texto corrido sempre em Libre Franklin.
+ * - Nada de verde com amarelo nem vermelho com estrela: são leituras partidárias.
+ */
+
+:root {
+	/* Cores: modo claro */
+	--cor-fundo: #FFD23C;           /* amarelo: fundo principal */
+	--cor-papel: #FFF4CC;           /* papel: blocos de leitura longa e gráficos */
+	--cor-tinta: #1B2466;           /* marinho: texto, fios, botões (9,8:1 no amarelo) */
+	--cor-tinta-suave: #3A4380;     /* texto secundário (6,3:1 no amarelo) */
+	--cor-titulo: #1B2466;
+	--cor-destaque: #FF5A1F;        /* laranja: sombra, retícula, fundos */
+	--cor-sobre-destaque: #1B2466;  /* texto sobre laranja */
+	--cor-faixa: #1B2466;           /* faixas cheias: menu, rodapé, botão */
+	--cor-sobre-faixa: #FFD23C;
+	--cor-alerta: #9E2A0E;          /* texto de alerta (5,2:1 no amarelo) */
+
+	/* Gráficos: 6 séries em ordem fixa, nunca cicladas. Validadas para daltonismo
+	   (protanopia e deuteranopia, pares vizinhos) sobre --cor-papel. Gráficos de
+	   dispersão e mapas: no máximo as 3 primeiras. Gráficos ficam sobre papel, não amarelo. */
+	--serie-1: #3552C8;             /* azul */
+	--serie-2: #F2551C;             /* laranja */
+	--serie-3: #0F9E86;             /* verde-água */
+	--serie-4: #7B52D6;             /* violeta */
+	--serie-5: #4F9A1E;             /* verde */
+	--serie-6: #CC3F8E;             /* magenta */
+
+	/* Tipos */
+	--fonte-display: "Big Shoulders Display", Anton, Impact, sans-serif;
+	--fonte-texto: "Libre Franklin", system-ui, sans-serif;
+
+	--tam-cartaz: clamp(5.5rem, 15vw, 12.25rem);   /* nome no topo do site, 88 a 196px */
+	--tam-titulo: clamp(2.25rem, 5vw, 3rem);       /* título de seção */
+	--tam-subtitulo: 1.75rem;                      /* cargo, nome de publicação */
+	--tam-chamada: 1.5rem;                         /* texto entre fios, acima do título */
+	--tam-menu: 1.25rem;
+	--tam-texto: 1.125rem;                         /* 18px */
+	--tam-pequeno: 0.875rem;
+
+	--altura-display: 0.85;
+	--altura-texto: 1.6;
+	--espaco-chamada: 0.12em;                      /* espaçamento de letras da chamada */
+
+	/* Gestos */
+	--inclinacao: -3deg;
+	--sombra-deslocada: 0.04em 0.03em 0 var(--cor-destaque);
+	--fio: 5px;
+	--reticula: radial-gradient(var(--cor-destaque) 38%, transparent 42%) 0 0 / 14px 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Cores: modo escuro. Marinho vira fundo, amarelo vira título, laranja segue igual. */
+		--cor-fundo: #121845;
+		--cor-papel: #1B2466;
+		--cor-tinta: #FFF3C4;           /* 15:1 no fundo */
+		--cor-tinta-suave: #C9CBE6;     /* 10,6:1 */
+		--cor-titulo: #FFD23C;          /* 11,7:1 */
+		--cor-destaque: #FF5A1F;
+		--cor-sobre-destaque: #121845;
+		--cor-faixa: #FFD23C;
+		--cor-sobre-faixa: #121845;
+		--cor-alerta: #FF7A4A;          /* 6,5:1 */
+
+		--serie-1: #6A86F0;
+		--serie-2: #F05A24;
+		--serie-3: #179A80;
+		--serie-4: #9C7DF0;
+		--serie-5: #5E9F30;
+		--serie-6: #E2609F;
+	}
+}
+
+/* Título-cartaz: só um por página ou peça. */
+.cartaz {
+	margin: 0;
+	font-family: var(--fonte-display);
+	font-weight: 900;
+	font-size: var(--tam-cartaz);
+	line-height: var(--altura-display);
+	text-transform: uppercase;
+	color: var(--cor-titulo);
+	text-shadow: var(--sombra-deslocada);
+	transform: rotate(var(--inclinacao));
+	transform-origin: left center;
+}
+
+/* Chamada entre dois fios grossos, acima de um título. */
+.chamada {
+	display: inline-block;
+	padding: 0.15em 0;
+	border-block: var(--fio) solid currentColor;
+	font-family: var(--fonte-display);
+	font-weight: 900;
+	font-size: var(--tam-chamada);
+	letter-spacing: var(--espaco-chamada);
+	text-transform: uppercase;
+}
+
+/* Círculo de retícula: decorativo, atrás do conteúdo (aria-hidden no HTML). */
+.reticula {
+	position: absolute;
+	z-index: 0;
+	border-radius: 50%;
+	background: var(--reticula);
+	pointer-events: none;
+}
+
+/* Botão: faixa cheia, sem borda arredondada. */
+.botao {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.55em 1.1em;
+	background: var(--cor-faixa);
+	color: var(--cor-sobre-faixa);
+	font-family: var(--fonte-display);
+	font-weight: 900;
+	font-size: 1.5rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.botao:hover,
+.botao:focus-visible {
+	box-shadow: 0.2em 0.15em 0 var(--cor-destaque);
+}

@@ -1,10 +1,7 @@
+/* Cores, tipos e gestos vêm de identidade.css, carregado antes deste arquivo. */
+
 :root {
-	--orange: #FF9000;
-	--navy: #2F3C4F;
-	--text: #4d4d4d;
-	--muted: #bfbfbf;
-	--line: #e6e6e6;
-	--mono: "Space Mono", Arial, monospace;
+	color-scheme: light dark;
 }
 
 *,
@@ -19,39 +16,50 @@ html {
 
 body {
 	margin: 0;
-	font-family: var(--mono);
-	font-size: 16px;
-	line-height: 1.7;
-	color: var(--text);
-	background: #fff;
+	font-family: var(--fonte-texto);
+	font-size: var(--tam-texto);
+	line-height: var(--altura-texto);
+	color: var(--cor-tinta);
+	background: var(--cor-fundo);
 }
 
 h1, h2, h3 {
 	margin: 0 0 20px;
-	color: #000;
-	font-weight: 400;
+	color: var(--cor-titulo);
 	line-height: 1.1;
 }
 
 p {
-	margin: 0 0 30px;
+	margin: 0 0 1.5em;
 }
 
 a {
-	color: var(--orange);
-	text-decoration: none;
-	transition: 0.5s;
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: var(--cor-destaque);
+	text-decoration-thickness: 3px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: none;
+}
+
+a:hover {
+	text-decoration-thickness: 6px;
+}
+
+:focus-visible {
+	outline: 3px solid var(--cor-destaque);
+	outline-offset: 3px;
 }
 
 ::selection {
-	color: #fff;
-	background: var(--orange);
+	color: var(--cor-sobre-faixa);
+	background: var(--cor-faixa);
 }
 
 .container {
 	max-width: 1170px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 32px;
 }
 
 .sprite {
@@ -66,9 +74,9 @@ a {
 	height: 1em;
 	fill: none;
 	stroke: currentColor;
-	stroke-width: 2;
-	stroke-linecap: round;
-	stroke-linejoin: round;
+	stroke-width: 2.5;
+	stroke-linecap: square;
+	stroke-linejoin: miter;
 	vertical-align: middle;
 }
 
@@ -77,183 +85,178 @@ a {
 	stroke: none;
 }
 
-/* Seletor de idioma */
+/* Faixa do topo: nome, seções e idioma */
 
-.lang-switch {
-	position: absolute;
-	top: 16px;
-	right: 16px;
-	z-index: 10;
-	display: flex;
-	gap: 4px;
-	padding: 4px;
-	font-size: 14px;
-	font-weight: 700;
-	background: rgba(255, 255, 255, 0.92);
-	border-radius: 999px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.lang-switch a,
-.lang-switch span {
-	padding: 2px 10px;
-	border-radius: 999px;
-	line-height: 1.6;
-}
-
-.lang-switch a {
-	color: var(--text);
-}
-
-.lang-switch a:hover {
-	color: var(--orange);
-}
-
-.lang-switch span {
-	color: #fff;
-	background: var(--orange);
-}
-
-/* Capa */
-
-.cover {
+.topo {
 	position: relative;
+	z-index: 2;
+	background: var(--cor-faixa);
+	color: var(--cor-sobre-faixa);
+	font-family: var(--fonte-display);
+	font-weight: 900;
+	font-size: var(--tam-menu);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.topo-conteudo {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	padding: 60px 15px;
-	overflow: hidden;
-	text-align: center;
-	background: url(img/cover.jpg) center / cover fixed;
+	gap: 8px 28px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 }
 
-.cover::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(255, 144, 0, 0.9);
+.topo a {
+	text-decoration: none;
 }
 
-.cover-content {
-	position: relative;
+.topo a:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--cor-destaque);
+	text-decoration-thickness: 4px;
 }
 
-.profile-thumb {
-	display: block;
-	width: 200px;
-	height: 200px;
-	margin: 0 auto 30px;
-	border-radius: 50%;
-	object-fit: cover;
+.topo-nome {
+	margin-right: auto;
+	font-size: 1.6rem;
 }
 
-.cover h1 {
-	margin-bottom: 30px;
-	color: #fff;
-	font-family: "Kaushan Script", cursive;
-	font-size: 50px;
-	line-height: 1.3;
-	transform: rotate(-5deg);
-}
-
-.cover h1 span {
-	position: relative;
-	padding: 4px 15px;
-}
-
-.cover h1 span::before,
-.cover h1 span::after {
-	content: "";
-	position: absolute;
-	top: 40px;
-	width: 30px;
-	height: 4px;
-	background: #fff;
-}
-
-.cover h1 span::before {
-	left: -30px;
-}
-
-.cover h1 span::after {
-	right: -30px;
-}
-
-.cover-subtitle {
-	margin: 0 0 10px;
-	color: #fff;
-}
-
-.cover .social-icons a {
-	color: #fff;
-	font-size: 30px;
-}
-
-/* Seções */
-
-.section {
-	padding: 7em 0;
-}
-
-.section-light {
-	background: #f7f7f7;
-}
-
-.section-orange {
-	background: var(--orange);
-}
-
-.section-title {
-	margin-bottom: 2.5em;
-	font-size: 40px;
-	line-height: 1.5;
-	text-align: center;
-}
-
-.section-orange .section-title {
-	color: #fff;
-}
-
-.social-icons {
+.topo-secoes,
+.lang-switch {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 24px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.social-icons li {
-	display: inline-block;
+.lang-switch {
+	gap: 12px;
+}
+
+.lang-switch span {
+	padding: 0 6px;
+	color: var(--cor-sobre-destaque);
+	background: var(--cor-destaque);
+}
+
+/* Capa */
+
+.capa {
+	position: relative;
+	overflow: hidden;
+	padding: 72px 0 48px;
+}
+
+.capa-reticula {
+	top: -80px;
+	right: -140px;
+	width: min(640px, 90vw);
+	aspect-ratio: 1;
+}
+
+.capa-conteudo {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 28px;
+}
+
+.capa .chamada {
+	margin: 0;
+}
+
+.capa .cartaz {
+	margin: 8px 0 24px;
+}
+
+/* Ícones sociais: quadrados de tinta, como o botão */
+
+.social-icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .social-icons a {
-	display: inline-block;
-	padding: 0 10px;
-	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	font-size: 24px;
+	color: var(--cor-sobre-faixa);
+	background: var(--cor-faixa);
+}
+
+.social-icons a:hover,
+.social-icons a:focus-visible {
+	box-shadow: 0.2em 0.15em 0 var(--cor-destaque);
+}
+
+/* Seções */
+
+.section {
+	padding: 4.5em 0;
+}
+
+.section-papel {
+	background: var(--cor-papel);
+}
+
+.section-faixa {
+	background: var(--cor-faixa);
+}
+
+.section-title {
+	margin-bottom: 1.2em;
+	font-family: var(--fonte-display);
+	font-weight: 900;
+	font-size: var(--tam-titulo);
+	line-height: 1;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.section-faixa .section-title {
+	color: var(--cor-sobre-faixa);
+}
+
+/* Os cards de projeto têm identidade própria: sem o sublinhado dos links. */
+.project {
+	text-decoration: none;
 }
 
 /* Sobre mim */
 
 .about {
-	max-width: 900px;
-	margin: 0 auto;
+	max-width: 760px;
 }
 
-.social-icons-boxed li {
-	margin-right: 6px;
+.about p {
+	font-size: 1.25rem;
 }
 
-.social-icons-boxed a {
-	padding: 6px 10px 8px;
-	color: #fff;
-	background: var(--navy);
-	border-radius: 2px;
-}
-
-.social-icons-boxed a:hover {
-	background: var(--orange);
+.about .social-icons {
+	margin-top: 2em;
 }
 
 /* Currículo */
+
+.cv-download {
+	margin: 0 0 3em;
+}
+
+.botao .icon {
+	stroke-width: 3;
+}
 
 .timeline {
 	position: relative;
@@ -268,68 +271,67 @@ a {
 	top: 20px;
 	bottom: 0;
 	left: 50%;
-	width: 2px;
-	background: var(--line);
+	width: var(--fio);
+	margin-left: calc(var(--fio) / -2);
+	background: var(--cor-tinta);
 }
 
 .timeline-section {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 24px;
 	text-align: center;
 }
 
 .timeline-item + .timeline-section {
-	margin-top: 60px;
+	margin-top: 64px;
 }
 
+/* A chamada fica sobre o fio vertical, então precisa de fundo. */
 .timeline-section h3 {
-	display: inline-block;
-	padding: 7px 15px;
-	font-size: 18px;
-	font-weight: bold;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-	background: var(--line);
-	border-radius: 4px;
+	margin: 0;
+	color: var(--cor-tinta);
+	background: var(--cor-fundo);
 }
 
 .timeline-item {
 	position: relative;
 	display: flex;
-	margin-bottom: 20px;
+	margin-bottom: 24px;
 }
 
 .timeline-item.right {
 	justify-content: flex-end;
 }
 
-.timeline-item.left {
-	text-align: right;
-}
-
 .timeline-badge {
 	position: absolute;
-	top: 40px;
+	top: 28px;
 	left: 50%;
 	z-index: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 44px;
-	height: 44px;
-	margin-left: -21px;
-	color: #fff;
-	font-size: 18px;
-	background: var(--orange);
-	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+	margin-left: -24px;
+	font-size: 22px;
+	color: var(--cor-sobre-faixa);
+	background: var(--cor-faixa);
 }
 
 .timeline-panel {
-	width: 45%;
+	width: calc(50% - 48px);
+	padding: 24px 28px;
+	background: var(--cor-papel);
 }
 
 .timeline-panel h3 {
-	font-size: 24px;
+	margin-bottom: 6px;
+	font-family: var(--fonte-display);
+	font-weight: 900;
+	font-size: var(--tam-subtitulo);
+	line-height: 1;
+	text-transform: uppercase;
 }
 
 .timeline-panel p {
@@ -338,60 +340,45 @@ a {
 
 .company {
 	display: block;
-	margin-bottom: 20px;
-	color: var(--muted);
-}
-
-.cv-download {
-	margin: -2em 0 3em;
-	text-align: center;
-}
-
-.button {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	padding: 10px 20px;
-	color: #fff;
-	background: var(--orange);
-	border-radius: 999px;
-}
-
-.button:hover {
-	background: var(--navy);
+	margin-bottom: 12px;
+	font-size: var(--tam-pequeno);
+	font-weight: 600;
+	color: var(--cor-tinta-suave);
 }
 
 .timeline-link {
 	display: inline-block;
 	margin-top: 8px;
-	font-weight: bold;
+	font-weight: 800;
 }
 
 /* Publicações */
 
 .publications {
 	max-width: 900px;
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
+.publication {
+	padding-top: 20px;
+	border-top: var(--fio) solid var(--cor-tinta);
+}
+
 .publication + .publication {
-	margin-top: 30px;
+	margin-top: 36px;
 }
 
 .publication h3 {
 	margin-bottom: 8px;
-	font-size: 20px;
-	line-height: 1.4;
+	font-size: 1.25rem;
+	font-weight: 800;
+	line-height: 1.35;
 }
 
 .publication h3 a {
-	color: #000;
-}
-
-.publication h3 a:hover {
-	color: var(--orange);
+	color: var(--cor-tinta);
 }
 
 .publication p {
@@ -399,7 +386,7 @@ a {
 }
 
 .publication-venue {
-	color: #8a8a8a;
+	color: var(--cor-tinta-suave);
 }
 
 /* Projetos */
@@ -526,13 +513,18 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
-	height: 50px;
-	color: #fff;
-	background: rgba(0, 0, 0, 0.8);
-	border-radius: 50%;
+	width: 52px;
+	height: 52px;
+	font-size: 24px;
+	color: var(--cor-sobre-faixa);
+	background: var(--cor-faixa);
 	opacity: 0;
 	visibility: hidden;
+}
+
+.gototop:hover,
+.gototop:focus-visible {
+	box-shadow: 0.2em 0.15em 0 var(--cor-destaque);
 }
 
 .gototop.active {
@@ -572,15 +564,12 @@ a {
 	}
 
 	.timeline::before {
-		left: 22px;
+		left: 24px;
 	}
 
 	.timeline-section {
 		text-align: left;
-	}
-
-	.timeline-item.left {
-		text-align: left;
+		padding-left: 64px;
 	}
 
 	.timeline-item.left,
@@ -595,50 +584,51 @@ a {
 	}
 
 	.timeline-panel {
-		width: calc(100% - 70px);
+		width: calc(100% - 64px);
 	}
 }
 
 @media (max-width: 768px) {
-	.section {
-		padding: 3em 0;
+	.container {
+		padding: 0 16px;
 	}
 
-	.cover {
-		background-attachment: scroll;
+	/* No celular a faixa fica só com o nome e o idioma. */
+	.topo-secoes {
+		display: none;
 	}
 
-	.cover h1 {
-		font-size: 34px;
+	.capa {
+		padding: 48px 0 64px;
 	}
 
-	.cover h1 span::before,
-	.cover h1 span::after {
-		top: 28px;
-		width: 20px;
-		height: 3px;
-	}
-
-	.cover h1 span::before {
-		left: -15px;
-	}
-
-	.cover h1 span::after {
-		right: -15px;
-	}
-
-	.timeline-item {
-		margin-bottom: 3em;
+	/* A retícula desce para o canto vazio ao lado dos ícones, longe do nome. */
+	.capa-reticula {
+		top: auto;
+		bottom: -60px;
+		right: -90px;
+		width: 240px;
 	}
 
 	.timeline-section h3 {
-		font-size: 16px;
-		letter-spacing: 2px;
+		font-size: 1.15rem;
+	}
+
+	.section {
+		padding: 3.5em 0;
+	}
+
+	.timeline-panel {
+		padding: 18px 20px;
 	}
 }
 
 @media (max-width: 480px) {
 	.projects {
 		grid-template-columns: 1fr;
+	}
+
+	.topo-nome {
+		font-size: 1.3rem;
 	}
 }

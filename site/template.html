@@ -22,11 +22,27 @@
 		})();
 	</script>
 {%- endif %}
-	<link rel="icon" href="{{ root }}assets/favicon.ico">
+	<meta name="theme-color" content="#FFD23C" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#121845" media="(prefers-color-scheme: dark)">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Gustavo Furtado">
+	<meta property="og:title" content="Gustavo Furtado">
+	<meta property="og:description" content="{{ cv.headline }}">
+	<meta property="og:url" content="{{ site_url }}{{ "" if lang == default_lang else lang ~ "/" }}">
+	<meta property="og:locale" content="{{ t.og_locale }}">
+	<meta property="og:image" content="{{ site_url }}assets/marca/compartilhar-{{ lang }}.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Gustavo Furtado, {{ cv.headline }}">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="icon" href="{{ root }}assets/favicon.ico" sizes="any">
+	<link rel="icon" href="{{ root }}assets/favicon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="{{ root }}assets/apple-touch-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,200;0,700;0,800;1,600&family=Space+Mono:wght@400;700&display=swap">
+	<!-- Big Shoulders e Libre Franklin são da identidade; Montserrat fica só para os títulos dos cards de projeto. -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Montserrat:wght@200;700;800&display=swap">
+	<link rel="stylesheet" href="{{ root }}assets/identidade.css">
 	<link rel="stylesheet" href="{{ root }}assets/style.css">
 	<script src="{{ root }}assets/main.js" defer></script>
 </head>
@@ -41,10 +57,21 @@
 		<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
 	</svg>
 
-	<nav class="lang-switch" aria-label="{{ t.language }}">
+	<nav class="topo">
+		<div class="container topo-conteudo">
+			<a class="topo-nome" href="#">Gustavo Furtado</a>
+			<ul class="topo-secoes">
+				<li><a href="#{{ t.about_id }}">{{ t.about_title }}</a></li>
+				<li><a href="#{{ t.resume_id }}">{{ t.resume_title }}</a></li>
+				<li><a href="#{{ t.projects_id }}">{{ t.projects_title }}</a></li>
+				<li><a href="#{{ t.publications_id }}">{{ t.publications_title }}</a></li>
+			</ul>
+			<ul class="lang-switch" aria-label="{{ t.language }}">
 {%- for other in languages %}
-		{% if other.code == lang %}<span aria-current="true">{{ other.label }}</span>{% else %}<a href="{{ root }}{{ other.path }}" hreflang="{{ other.html_lang }}" lang="{{ other.html_lang }}" data-lang="{{ other.code }}">{{ other.label }}</a>{% endif %}
+				<li>{% if other.code == lang %}<span aria-current="true">{{ other.label }}</span>{% else %}<a href="{{ root }}{{ other.path }}" hreflang="{{ other.html_lang }}" lang="{{ other.html_lang }}" data-lang="{{ other.code }}">{{ other.label }}</a>{% endif %}</li>
 {%- endfor %}
+			</ul>
+		</div>
 	</nav>
 
 {%- macro social_icons(extra_class="") %}
@@ -55,11 +82,11 @@
 			</ul>
 {%- endmacro %}
 
-	<header class="cover">
-		<div class="cover-content animate-box">
-			<img class="profile-thumb" src="{{ root }}assets/img/foto.jpeg" alt="{{ t.photo_alt }}">
-			<h1><span>Gustavo Furtado</span></h1>
-			<p class="cover-subtitle">{{ cv.headline }}</p>
+	<header class="capa">
+		<div class="reticula capa-reticula" aria-hidden="true"></div>
+		<div class="container capa-conteudo">
+			<p class="chamada">{{ cv.headline }}</p>
+			<h1 class="cartaz">Gustavo<br>Furtado</h1>
 {{- social_icons() }}
 		</div>
 	</header>
@@ -79,10 +106,10 @@
 	<section id="{{ t.resume_id }}" class="section">
 		<div class="container">
 			<h2 class="section-title animate-box">{{ t.resume_title }}</h2>
-			<p class="cv-download animate-box"><a class="button" href="{{ root }}{{ t.cv_pdf | urlencode }}"><svg class="icon"><use href="#i-download"/></svg> {{ t.download_cv }}</a></p>
+			<p class="cv-download animate-box"><a class="botao" href="{{ root }}{{ t.cv_pdf | urlencode }}"><svg class="icon"><use href="#i-download"/></svg> {{ t.download_cv }}</a></p>
 			<ul class="timeline">
 {%- for group in timeline %}
-				<li class="timeline-section animate-box"><h3>{{ group.title }}</h3></li>
+				<li class="timeline-section animate-box"><h3 class="chamada">{{ group.title }}</h3></li>
 {%- for item in group["items"] %}
 				<li class="timeline-item {{ item.side }} animate-box">
 					<span class="timeline-badge"><svg class="icon"><use href="#{{ group.icon }}"/></svg></span>
@@ -101,7 +128,7 @@
 		</div>
 	</section>
 
-	<section id="{{ t.projects_id }}" class="section section-orange">
+	<section id="{{ t.projects_id }}" class="section section-faixa">
 		<div class="container">
 			<h2 class="section-title animate-box">{{ t.projects_title }}</h2>
 			<div class="projects">
@@ -114,7 +141,7 @@
 		</div>
 	</section>
 
-	<section id="{{ t.publications_id }}" class="section section-light">
+	<section id="{{ t.publications_id }}" class="section section-papel">
 		<div class="container">
 			<h2 class="section-title animate-box">{{ t.publications_title }}</h2>
 			<ol class="publications">
