@@ -10,11 +10,27 @@
 	<link rel="alternate" hreflang="en" href="https://www.gustavofurtado.com/">
 	<link rel="alternate" hreflang="pt-BR" href="https://www.gustavofurtado.com/pt/">
 	<link rel="alternate" hreflang="x-default" href="https://www.gustavofurtado.com/">
-	<link rel="icon" href="../assets/favicon.ico">
+	<meta name="theme-color" content="#FFD23C" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#121845" media="(prefers-color-scheme: dark)">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Gustavo Furtado">
+	<meta property="og:title" content="Gustavo Furtado">
+	<meta property="og:description" content="Cientista de Dados">
+	<meta property="og:url" content="https://www.gustavofurtado.com/pt/">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:image" content="https://www.gustavofurtado.com/assets/marca/compartilhar-pt.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Gustavo Furtado, Cientista de Dados">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="icon" href="../assets/favicon.ico" sizes="any">
+	<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,200;0,700;0,800;1,600&family=Space+Mono:wght@400;700&display=swap">
+	<!-- Big Shoulders e Libre Franklin são da identidade; Montserrat fica só para os títulos dos cards de projeto. -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Montserrat:wght@200;700;800&display=swap">
+	<link rel="stylesheet" href="../assets/identidade.css">
 	<link rel="stylesheet" href="../assets/style.css">
 	<script src="../assets/main.js" defer></script>
 </head>
@@ -29,16 +45,27 @@
 		<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
 	</svg>
 
-	<nav class="lang-switch" aria-label="Idioma">
-		<a href="../" hreflang="en" lang="en" data-lang="en">EN</a>
-		<span aria-current="true">PT</span>
+	<nav class="topo">
+		<div class="container topo-conteudo">
+			<a class="topo-nome" href="#">Gustavo Furtado</a>
+			<ul class="topo-secoes">
+				<li><a href="#sobre">Sobre mim</a></li>
+				<li><a href="#curriculo">Meu currículo</a></li>
+				<li><a href="#projetos">Projetos</a></li>
+				<li><a href="#publicacoes">Publicações</a></li>
+			</ul>
+			<ul class="lang-switch" aria-label="Idioma">
+				<li><a href="../" hreflang="en" lang="en" data-lang="en">EN</a></li>
+				<li><span aria-current="true">PT</span></li>
+			</ul>
+		</div>
 	</nav>
 
-	<header class="cover">
-		<div class="cover-content animate-box">
-			<img class="profile-thumb" src="../assets/img/foto.jpeg" alt="Foto de Gustavo Furtado">
-			<h1><span>Gustavo Furtado</span></h1>
-			<p class="cover-subtitle">Cientista de Dados</p>
+	<header class="capa">
+		<div class="reticula capa-reticula" aria-hidden="true"></div>
+		<div class="container capa-conteudo">
+			<p class="chamada">Cientista de Dados</p>
+			<h1 class="cartaz">Gustavo<br>Furtado</h1>
 			<ul class="social-icons">
 				<li><a href="https://www.linkedin.com/in/gustavo-furtado/" aria-label="LinkedIn"><svg class="icon icon-fill"><use href="#i-linkedin"/></svg></a></li>
 				<li><a href="https://github.com/GusFurtado" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></li>
@@ -64,9 +91,9 @@
 	<section id="curriculo" class="section">
 		<div class="container">
 			<h2 class="section-title animate-box">Meu currículo</h2>
-			<p class="cv-download animate-box"><a class="button" href="../documents/curriculum/Gustavo%20Furtado%20-%20Cientista%20de%20Dados.pdf"><svg class="icon"><use href="#i-download"/></svg> Baixar currículo (PDF)</a></p>
+			<p class="cv-download animate-box"><a class="botao" href="../documents/curriculum/Gustavo%20Furtado%20-%20Cientista%20de%20Dados.pdf"><svg class="icon"><use href="#i-download"/></svg> Baixar currículo (PDF)</a></p>
 			<ul class="timeline">
-				<li class="timeline-section animate-box"><h3>Experiência Profissional</h3></li>
+				<li class="timeline-section animate-box"><h3 class="chamada">Experiência Profissional</h3></li>
 				<li class="timeline-item left animate-box">
 					<span class="timeline-badge"><svg class="icon"><use href="#i-briefcase"/></svg></span>
 					<div class="timeline-panel">
@@ -107,7 +134,7 @@
 						<p>Cronoanálise e melhoria de processos.</p>
 					</div>
 				</li>
-				<li class="timeline-section animate-box"><h3>Formação Acadêmica</h3></li>
+				<li class="timeline-section animate-box"><h3 class="chamada">Formação Acadêmica</h3></li>
 				<li class="timeline-item right animate-box">
 					<span class="timeline-badge"><svg class="icon"><use href="#i-graduation"/></svg></span>
 					<div class="timeline-panel">
@@ -130,7 +157,7 @@
 		</div>
 	</section>
 
-	<section id="projetos" class="section section-orange">
+	<section id="projetos" class="section section-faixa">
 		<div class="container">
 			<h2 class="section-title animate-box">Projetos</h2>
 			<div class="projects">
@@ -156,7 +183,7 @@
 		</div>
 	</section>
 
-	<section id="publicacoes" class="section section-light">
+	<section id="publicacoes" class="section section-papel">
 		<div class="container">
 			<h2 class="section-title animate-box">Publicações</h2>
 			<ol class="publications">

@@ -5,7 +5,7 @@ en:
   label: EN
   html_lang: en
   language: Language
-  photo_alt: Photo of Gustavo Furtado
+  og_locale: en_US
   back_to_top: Back to top
   about_id: about
   about_title: About me
@@ -29,7 +29,7 @@ pt:
   label: PT
   html_lang: pt-BR
   language: Idioma
-  photo_alt: Foto de Gustavo Furtado
+  og_locale: pt_BR
   back_to_top: Voltar ao topo
   about_id: sobre
   about_title: Sobre mim

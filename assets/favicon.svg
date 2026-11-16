@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+	<!-- O nome empilhado e inclinado, em silhueta: duas linhas de tinta com a sombra laranja. -->
+	<rect width="64" height="64" rx="12" fill="#FFD23C"/>
+	<g transform="rotate(-6 32 32)">
+		<rect x="12" y="19" width="42" height="11" fill="#FF5A1F"/>
+		<rect x="12" y="35" width="42" height="11" fill="#FF5A1F"/>
+		<rect x="9" y="17" width="42" height="11" fill="#1B2466"/>
+		<rect x="9" y="33" width="42" height="11" fill="#1B2466"/>
+	</g>
+</svg>
