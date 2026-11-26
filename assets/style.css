@@ -391,10 +391,25 @@ a:hover {
 
 /* Projetos */
 
+/* Dois grupos: pacotes Python (4 colunas) e apps self-hosted (3 colunas), cada um com
+   uma chamada da identidade por cima. */
+.projects-group {
+	margin: 0 0 1.4em;
+	color: var(--cor-sobre-faixa);
+}
+
 .projects {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 12px;
+}
+
+.projects--packages {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.projects + .projects-group {
+	margin-top: 3em;
 }
 
 /* Cada card é um fundo em SVG (assets/img/projects/<id>.svg) com o nome em texto por cima. */
@@ -433,22 +448,6 @@ a:hover {
 	paint-order: stroke fill;
 }
 
-.project--markowizard {
-	background-color: #001d63;
-}
-
-.project--markowizard .project-title {
-	font-size: clamp(1.5rem, 13cqw, 2.7rem);
-	font-weight: 700;
-	letter-spacing: -0.02em;
-	color: #fff;
-	text-shadow: 0 2px 16px rgba(0, 15, 50, 0.45);
-}
-
-.project--markowizard .project-title em {
-	color: #a8ecee;
-}
-
 .project--statsjunk {
 	background-color: #330033;
 	background-size: 200px;
@@ -468,21 +467,13 @@ a:hover {
 }
 
 .project--cellmate .project-title {
-	font-size: clamp(1.9rem, 21cqw, 3.7rem);
+	font-size: clamp(1.9rem, 19cqw, 3.7rem);
 	font-weight: 200;
 	color: #fff;
 }
 
-.project--papelada .project-title {
-	font-size: clamp(1.6rem, 14cqw, 2.8rem);
-	font-weight: 700;
-	letter-spacing: -0.02em;
-	color: #fff;
-	text-shadow: 0 2px 16px rgba(12, 16, 22, 0.8);
-}
-
 .project--gender-guesser-br .project-title {
-	font-size: clamp(1.2rem, 9cqw, 2.1rem);
+	font-size: clamp(0.9rem, 8.5cqw, 2.1rem);
 	font-weight: 800;
 	letter-spacing: -0.02em;
 	color: #fff;
@@ -501,6 +492,57 @@ a:hover {
 	color: #062a22;
 	background: #ffdf00;
 	border-radius: 0.2em;
+}
+
+/* Apps self-hosted: o banner do README de cada app em formato de card. A cena da
+   classe (rpg-icons) fica no topo e se funde na sombra da classe; embaixo, o ícone do app
+   e o nome, com a primeira parte na cor da lua e a segunda no destaque da classe (o
+   destaque clareado do tema escuro dos apps). O gradiente e o banner vêm do HTML. */
+.project-app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	/* Em %, não cqw: o card não pode consultar o próprio tamanho, só os filhos. */
+	padding-bottom: 7%;
+	background-color: var(--app-sombra);
+	background-size: 100% 100%, auto 64%;
+	background-position: center, 72% top;
+	background-repeat: no-repeat;
+}
+
+.app-icon {
+	width: 24cqw;
+	height: auto;
+	margin-bottom: 3.5cqw;
+	border-radius: 22%;
+	box-shadow: 0 1.5cqw 5cqw rgba(0, 0, 0, 0.45);
+}
+
+.project-app .project-title {
+	font-size: clamp(1.3rem, 11cqw, 2.5rem);
+	font-weight: 800;
+	letter-spacing: -0.01em;
+	color: #f5d98b;
+}
+
+.project-app .project-title em {
+	color: var(--app-destaque);
+}
+
+.project--simulancer {
+	--app-sombra: #1a1126;
+	--app-destaque: #ee7b72;
+}
+
+.project--paperanger {
+	--app-sombra: #192b24;
+	--app-destaque: #9ccc65;
+}
+
+.project--markowizard {
+	--app-sombra: #1a1126;
+	--app-destaque: #ce79f5;
 }
 
 /* Voltar ao topo */
@@ -559,10 +601,6 @@ a:hover {
 /* Telas menores */
 
 @media (max-width: 991px) {
-	.projects {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
 	.timeline::before {
 		left: 24px;
 	}
@@ -589,6 +627,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+	.projects--packages {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 	.container {
 		padding: 0 16px;
 	}
@@ -623,8 +665,14 @@ a:hover {
 	}
 }
 
+@media (max-width: 640px) {
+	.projects--apps {
+		grid-template-columns: 1fr;
+	}
+}
+
 @media (max-width: 480px) {
-	.projects {
+	.projects--packages {
 		grid-template-columns: 1fr;
 	}
 

@@ -40,7 +40,8 @@ body {{ margin: 0; background: none; }}
 
 
 def main():
-    projects = yaml.safe_load((ROOT / "site" / "projects.yaml").read_text(encoding="utf-8"))
+    # Só os pacotes: os apps self-hosted têm o próprio banner no README.
+    projects = yaml.safe_load((ROOT / "site" / "projects.yaml").read_text(encoding="utf-8"))["packages"]
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": WIDTH, "height": HEIGHT}, device_scale_factor=SCALE)

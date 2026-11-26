@@ -19,6 +19,8 @@ en:
   read_pdf: Read (PDF)
   projects_id: projects
   projects_title: Projects
+  packages_title: Python packages
+  apps_title: Self-hosted apps
   present: Present
   degree_in: in
   summary_section: Summary
@@ -43,6 +45,8 @@ pt:
   read_pdf: Ler (PDF)
   projects_id: projetos
   projects_title: Projetos
+  packages_title: Pacotes Python
+  apps_title: Apps self-hosted
   present: Atual
   degree_in: em
   summary_section: Resumo
