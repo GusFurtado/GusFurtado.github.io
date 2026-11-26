@@ -1,4 +1,6 @@
 # Cards da seção Projetos, em dois grupos. URLs sem "http" são relativas à raiz do site.
+# tagline: a frase curta embaixo do card, em cada idioma; com a identidade dos apps
+# padronizada, só o nome não diferencia os projetos. Bem curta, uma linha no desktop.
 #
 # packages: o fundo de cada card é assets/img/projects/<id>.svg e o título é texto
 # (HTML), estilizado em assets/style.css pela classe project--<id>.
@@ -13,34 +15,55 @@ packages:
     name: Dados Abertos Brasil
     url: https://www.gustavofurtado.com/DadosAbertosBrasil/
     title: Dados<br>Abertos<br>Brasil
+    tagline:
+      en: Brazil's open government data in Python
+      pt: Dados abertos do governo em Python
 
   - id: gender-guesser-br
     name: Gender Guesser Brasil
     url: https://www.gustavofurtado.com/gender-guesser-br/
     title: gender<em>guesser</em><small>BR</small>
+    tagline:
+      en: Gender of names from the IBGE Census
+      pt: Gênero de nomes pelo Censo do IBGE
 
   - id: statsjunk
     name: statsjunk
     url: https://www.gustavofurtado.com/statsjunk/
     title: stats<em>junk</em>
+    tagline:
+      en: Statistical odds and ends in Python
+      pt: Funções estatísticas avulsas em Python
 
   - id: cellmate
     name: Cellmate
     url: https://www.gustavofurtado.com/cellmate/
     title: Cellmate
+    tagline:
+      en: Styled Excel spreadsheets
+      pt: Planilhas do Excel formatadas
 
 apps:
   - id: simulancer
     name: SimuLancer
     url: https://www.gustavofurtado.com/SimuLancer/
     title: Simu<em>Lancer</em>
+    tagline:
+      en: Discrete event simulation with YAML models
+      pt: Simulação de eventos discretos com modelos em YAML
 
   - id: paperanger
     name: PapeRanger
     url: https://www.gustavofurtado.com/PapeRanger/
     title: Pape<em>Ranger</em>
+    tagline:
+      en: A home for your household's paperwork
+      pt: Um lugar para a papelada da casa
 
   - id: markowizard
     name: MarkoWizard
     url: https://www.gustavofurtado.com/MarkoWizard/
     title: Marko<em>Wizard</em>
+    tagline:
+      en: Markowitz portfolio optimization
+      pt: Otimização de carteiras de Markowitz

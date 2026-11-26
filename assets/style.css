@@ -412,6 +412,24 @@ a:hover {
 	margin-top: 3em;
 }
 
+/* Cada card vem com uma frase curta embaixo, no texto da identidade (a frase é do site,
+   o card é do projeto). */
+.projects {
+	row-gap: 1.5em;
+}
+
+.project-item {
+	margin: 0;
+}
+
+.project-tagline {
+	margin-top: 0.6em;
+	font-family: var(--fonte-texto);
+	font-size: var(--tam-pequeno);
+	line-height: 1.4;
+	color: var(--cor-sobre-faixa);
+}
+
 /* Cada card é um fundo em SVG (assets/img/projects/<id>.svg) com o nome em texto por cima. */
 .project {
 	display: grid;
