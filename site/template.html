@@ -131,9 +131,19 @@
 	<section id="{{ t.projects_id }}" class="section section-faixa">
 		<div class="container">
 			<h2 class="section-title animate-box">{{ t.projects_title }}</h2>
-			<div class="projects">
-{%- for project in projects %}
+			<h3 class="projects-group chamada animate-box">{{ t.packages_title }}</h3>
+			<div class="projects projects--packages">
+{%- for project in projects.packages %}
 				<a class="project project--{{ project.id }} animate-box" href="{{ project.url if project.url.startswith("http") else root ~ project.url }}" style="background-image: url({{ root }}assets/img/projects/{{ project.id }}.svg);" aria-label="{{ project.name }}">
+					<span class="project-title" aria-hidden="true">{{ project.title | safe }}</span>
+				</a>
+{%- endfor %}
+			</div>
+			<h3 class="projects-group chamada animate-box">{{ t.apps_title }}</h3>
+			<div class="projects projects--apps">
+{%- for project in projects.apps %}
+				<a class="project project-app project--{{ project.id }} animate-box" href="{{ project.url if project.url.startswith("http") else root ~ project.url }}" style="background-image: linear-gradient(to bottom, transparent 22%, var(--app-sombra) 60%), url({{ root }}assets/img/projects/{{ project.id }}-banner.webp);" aria-label="{{ project.name }}">
+					<img class="app-icon" src="{{ root }}assets/img/projects/{{ project.id }}-icon.webp" alt="" width="180" height="180" loading="lazy">
 					<span class="project-title" aria-hidden="true">{{ project.title | safe }}</span>
 				</a>
 {%- endfor %}
